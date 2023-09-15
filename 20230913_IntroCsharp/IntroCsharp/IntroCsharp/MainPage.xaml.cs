@@ -84,8 +84,23 @@ namespace IntroCsharp
                 debug("Passaré per aquí??????");
 
                 debug(ara.ToString("dddd, dd \\de MMMM \\de yyyy, hh:mm tt", ciEnglish));
-
             }
+
+            
+
+            for(int m = 1; m <= 12; m++)
+            {
+                DateTime data = new DateTime(2023, m, 01);
+                debug(data.ToString("MMMM", ciEnglish));
+            }
+            DateTime dilluns = new DateTime(2023, 09, 11);
+            for (int m = 1; m <= 7; m++)
+            {   
+                debug(dilluns.ToString("dddd", ciEnglish));
+                dilluns = dilluns.AddDays(1);
+            }
+
+
         }
 
         private void debug(string nom)
