@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.ViewManagement.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -70,7 +71,7 @@ namespace IntroCsharp
             // Conversió de números a String
             int edat = 34;
             float pes = 2256.3f;
-            CultureInfo ciEnglish = new CultureInfo("en-US");
+            CultureInfo ciEnglish = new CultureInfo("ko-KR");
             String frase = $"Maria té {edat} anys i pesa " + pes.ToString("#,###.00", ciEnglish);
             debug(frase);
             frase = $"Maria té {edat} anys i pesa {pes.ToString("#,###.00", new CultureInfo("ca-ES"))}";
@@ -85,14 +86,18 @@ namespace IntroCsharp
 
                 debug(ara.ToString("dddd, dd \\de MMMM \\de yyyy, hh:mm tt", ciEnglish));
             }
-
-            
-
+             
+            int n = 12;
+            String[] nomMesos = new String[n];
             for(int m = 1; m <= 12; m++)
             {
                 DateTime data = new DateTime(2023, m, 01);
                 debug(data.ToString("MMMM", ciEnglish));
+                nomMesos[m-1] = data.ToString("MMMM", ciEnglish);
             }
+            // publiquem la informació al combobox
+            cboMesos.ItemsSource = nomMesos;
+
             DateTime dilluns = new DateTime(2023, 09, 11);
             for (int m = 1; m <= 7; m++)
             {   
@@ -100,12 +105,35 @@ namespace IntroCsharp
                 dilluns = dilluns.AddDays(1);
             }
 
+            //********************************
+            // 
 
         }
 
         private void debug(string nom)
         {
             txbSortida.Text += nom + "\n";
+        }
+
+        private void txbDataNaixement_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Boolean dataCorrecta = true;
+            try
+            {
+                DateTime dataNaixement = DateTime.ParseExact(
+                    txbDataNaixement.Text,
+                    "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            }catch(Exception ex)
+            {
+                dataCorrecta = false;
+            }
+            Color c = dataCorrecta ? Colors.Green : Colors.Red;
+            txbDataNaixement.Background = new SolidColorBrush(c);
+        }
+
+        private void txbPes_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

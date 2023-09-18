@@ -10,10 +10,14 @@
                         
     >
 
-    <Grid>
+    <StackPanel>
         <TextBox x:ConnectionId='2'  x:Name="txbSortida" IsReadOnly="True" TextWrapping="Wrap" 
                   FontFamily="Consolas" FontSize="12">
         </TextBox>
-    </Grid>
+        <ComboBox x:ConnectionId='3' x:Name="cboMesos"></ComboBox>
+        <DatePicker></DatePicker>
+        <CalendarDatePicker></CalendarDatePicker>
+        <TextBox x:ConnectionId='4' x:Name="txbDataNaixement"                                            ></TextBox>
+    </StackPanel>
 </Page>
 

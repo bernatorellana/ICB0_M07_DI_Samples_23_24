@@ -30,13 +30,13 @@
     <AppXManifest Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20230913_IntroCsharp\IntroCsharp\IntroCsharp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-15T18:27:22.420</Modified>
+      <Modified>2023-09-18T17:12:14.738</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20230913_IntroCsharp\IntroCsharp\IntroCsharp\bin\x86\Debug\IntroCsharp.exe">
       <PackagePath>entrypoint\IntroCsharp.exe</PackagePath>
-      <Modified>2023-09-15T18:27:22.128</Modified>
+      <Modified>2023-09-18T17:12:14.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -82,15 +82,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20230913_IntroCsharp\IntroCsharp\IntroCsharp\bin\x86\Debug\IntroCsharp.xr.xml">
       <PackagePath>IntroCsharp.xr.xml</PackagePath>
-      <Modified>2023-09-15T17:40:17.781</Modified>
+      <Modified>2023-09-18T17:04:06.330</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20230913_IntroCsharp\IntroCsharp\IntroCsharp\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-09-15T18:27:22.089</Modified>
+      <Modified>2023-09-18T17:12:14.407</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20230913_IntroCsharp\IntroCsharp\IntroCsharp\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-09-15T18:27:22.090</Modified>
+      <Modified>2023-09-18T17:12:14.408</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -102,7 +102,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20230913_IntroCsharp\IntroCsharp\IntroCsharp\bin\x86\Debug\Core\IntroCsharp.exe">
       <PackagePath>IntroCsharp.exe</PackagePath>
-      <Modified>2023-09-15T18:27:22.417</Modified>
+      <Modified>2023-09-18T17:12:14.735</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

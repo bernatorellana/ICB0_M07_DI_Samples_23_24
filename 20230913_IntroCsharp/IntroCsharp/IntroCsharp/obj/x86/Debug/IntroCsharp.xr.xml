@@ -8,7 +8,7 @@
       <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
@@ -16,7 +16,11 @@
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="FontSize" />
+      <RootEvent Name="TextChanged" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox" />
+    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker" />
+    <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker" />
     <RootType FullName="IntroCsharp.MainPage" />
   </Roots.RootTypes>
 </Roots>

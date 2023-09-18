@@ -10,9 +10,15 @@
     Loaded="Page_Loaded"
     >
 
-    <Grid>
+    <StackPanel>
         <TextBox  x:Name="txbSortida" IsReadOnly="True" TextWrapping="Wrap" 
                   FontFamily="Consolas" FontSize="12">
         </TextBox>
-    </Grid>
+        <ComboBox x:Name="cboMesos"></ComboBox>
+        <DatePicker></DatePicker>
+        <CalendarDatePicker></CalendarDatePicker>
+        <TextBox x:Name="txbDataNaixement" TextChanged="txbDataNaixement_TextChanged" ></TextBox>
+        <TextBox x:Name="txbPes" TextChanged="txbDataNaixement_TextChanged" ></TextBox>
+        
+    </StackPanel>
 </Page>
