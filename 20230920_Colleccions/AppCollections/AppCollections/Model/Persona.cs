@@ -23,6 +23,17 @@ namespace AppCollections.Model
         public string Name { get => name; set => name = value; }
         public int Age { get => age; set => age = value; }
 
+        public override bool Equals(object obj)
+        {
+            return obj is Persona persona &&
+                   Id == persona.Id;
+        }
+
+        public override int GetHashCode()
+        {
+            return 2108858624 + Id.GetHashCode();
+        }
+
         public override string ToString()
         {
             return $"ID:{Id}, Name:{Name}, Age:{Age}";

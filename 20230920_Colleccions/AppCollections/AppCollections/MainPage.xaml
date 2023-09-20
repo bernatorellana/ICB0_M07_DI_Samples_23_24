@@ -16,18 +16,36 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
         <TextBox
-            AcceptsReturn="True"
-            x:Name="txbDebug"
-            Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" ></TextBox>
-        <TextBox x:Name="txbNew" Grid.Column="1" Grid.Row="0"></TextBox>
-        <ListBox x:Name="lsb1" Grid.Column="1" Grid.Row="1"></ListBox>
-        <ListBox x:Name="lsb2"  Grid.Column="1" Grid.Row="2"></ListBox>
+                AcceptsReturn="True"
+                x:Name="txbDebug"
+            Grid.Column="0" Grid.Row="0" Grid.RowSpan="4" 
+               ></TextBox>
+        <Grid Grid.Column="1" Grid.Row="0"
+              Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="txbNew" Grid.Column="0" HorizontalAlignment="Stretch"  
+                     Margin="10"></TextBox>
+            <Button Grid.Column="1" FontFamily="Segoe MDL2 Assets" FontSize="30" >&#xE8FA;</Button>
+        </Grid>
+        <StackPanel  Grid.Column="1" Grid.Row="2"
+                     HorizontalAlignment="Center"
+                     Orientation="Horizontal">
+            <Button  FontFamily="Segoe MDL2 Assets" FontSize="30" 
+                     Margin="40 0 0 0">&#xE898;</Button>
+            <Button  Margin="40 0 0 0" FontFamily="Segoe MDL2 Assets" FontSize="30" >&#xE896;</Button>
+
+        </StackPanel>
+        <ListBox x:Name="lsb1" Grid.Column="1" Grid.Row="1" Margin="10"></ListBox>
+        <ListBox x:Name="lsb2"  Grid.Column="1" Grid.Row="3" Margin="10"></ListBox>
         
     </Grid>
 </Page>

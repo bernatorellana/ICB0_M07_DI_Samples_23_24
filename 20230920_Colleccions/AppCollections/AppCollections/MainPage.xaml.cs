@@ -56,8 +56,23 @@ namespace AppCollections
             txbDebug.Text += llistaPersones.Count + "";
             foreach (Persona p in llistaPersones)
             {
+                    txbDebug.Text += $"\t - {p}\n";
+            }
+            List<Persona> filtrada = llistaPersones.Where(p => p.Id >= 4).ToList();
+            foreach (Persona p in filtrada)
+            {
                 txbDebug.Text += $"\t - {p}\n";
             }
+
+            int index = llistaPersones.IndexOf(p5);
+            txbDebug.Text += index + "\n";
+            Persona p5bis = new Persona(6, "Pere Pau", 83);
+            llistaPersones.Remove(p5bis);
+
+            index = llistaPersones.IndexOf(p5bis);
+            txbDebug.Text += index + "\n";
+
+            lsb1.ItemsSource = llistaPersones;
         }
     }
 }
