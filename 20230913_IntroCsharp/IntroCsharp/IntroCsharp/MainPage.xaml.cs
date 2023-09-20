@@ -117,6 +117,8 @@ namespace IntroCsharp
 
         private void txbDataNaixement_TextChanged(object sender, TextChangedEventArgs e)
         {
+
+
             Boolean dataCorrecta = true;
             try
             {
@@ -127,13 +129,30 @@ namespace IntroCsharp
             {
                 dataCorrecta = false;
             }
-            Color c = dataCorrecta ? Colors.Green : Colors.Red;
-            txbDataNaixement.Background = new SolidColorBrush(c);
+            mostraError(dataCorrecta, txbDataNaixement);
         }
 
         private void txbPes_TextChanged(object sender, TextChangedEventArgs e)
         {
+            Boolean pesCorrecte = true;
+            double pes;
+            pesCorrecte = Double.TryParse(txbPes.Text, out pes);
+            /*try
+            {
+                Double pes = Double.Parse(
+                    txbPes.Text);
+            }
+            catch (Exception ex)
+            {
+                pesCorrecte = false;
+            }*/
+            mostraError(pesCorrecte, txbPes);
+        }
 
+        private void mostraError(Boolean correcte, TextBox t)
+        {
+            Color c = correcte ? Colors.Green : Colors.Red;
+            t.Background = new SolidColorBrush(c);
         }
     }
 }

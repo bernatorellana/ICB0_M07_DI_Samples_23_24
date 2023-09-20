@@ -18,7 +18,7 @@
         <DatePicker></DatePicker>
         <CalendarDatePicker></CalendarDatePicker>
         <TextBox x:Name="txbDataNaixement" TextChanged="txbDataNaixement_TextChanged" ></TextBox>
-        <TextBox x:Name="txbPes" TextChanged="txbDataNaixement_TextChanged" ></TextBox>
+        <TextBox x:Name="txbPes" TextChanged="txbPes_TextChanged" ></TextBox>
         
     </StackPanel>
 </Page>

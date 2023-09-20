@@ -18,6 +18,8 @@
         <DatePicker></DatePicker>
         <CalendarDatePicker></CalendarDatePicker>
         <TextBox x:ConnectionId='4' x:Name="txbDataNaixement"                                            ></TextBox>
+        <TextBox x:ConnectionId='5' x:Name="txbPes"                                  ></TextBox>
+        
     </StackPanel>
 </Page>
 
