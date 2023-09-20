@@ -44,7 +44,7 @@
             <Button  Margin="40 0 0 0" FontFamily="Segoe MDL2 Assets" FontSize="30" >&#xE896;</Button>
 
         </StackPanel>
-        <ListBox x:Name="lsb1" Grid.Column="1" Grid.Row="1" Margin="10"></ListBox>
+        <ListBox x:Name="lsb1" Grid.Column="1" Grid.Row="1" Margin="10" ScrollViewer.VerticalScrollBarVisibility="Visible"></ListBox>
         <ListBox x:Name="lsb2"  Grid.Column="1" Grid.Row="3" Margin="10"></ListBox>
         
     </Grid>

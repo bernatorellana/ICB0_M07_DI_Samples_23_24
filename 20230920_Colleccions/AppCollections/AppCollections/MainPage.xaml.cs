@@ -63,6 +63,7 @@ namespace AppCollections
             {
                 txbDebug.Text += $"\t - {p}\n";
             }
+            txbDebug.Text += ">>"+llistaPersones.Max(p => p.Id) + "\n" ;
 
             int index = llistaPersones.IndexOf(p5);
             txbDebug.Text += index + "\n";
