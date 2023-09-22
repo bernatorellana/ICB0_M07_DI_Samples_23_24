@@ -33,8 +33,13 @@
                 <ColumnDefinition Width="auto"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <TextBox x:Name="txbNew" Grid.Column="0" HorizontalAlignment="Stretch"  
-                     Margin="10"></TextBox>
-            <Button Grid.Column="1" FontFamily="Segoe MDL2 Assets" FontSize="30" >&#xE8FA;</Button>
+                     Margin="10" TextChanged="txbNew_TextChanged"></TextBox>
+            <Button x:Name="btnAdd" 
+                Grid.Column="1" 
+                    FontFamily="Segoe MDL2 Assets" FontSize="30" 
+                    Click="btnAdd_Click"
+                    >
+                &#xE8FA;</Button>
         </Grid>
         <StackPanel  Grid.Column="1" Grid.Row="2"
                      HorizontalAlignment="Center"
