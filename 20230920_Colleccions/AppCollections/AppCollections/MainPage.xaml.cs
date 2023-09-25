@@ -1,5 +1,6 @@
 ﻿using AppCollections.Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,6 +28,7 @@ namespace AppCollections
         public MainPage()
         {
             this.InitializeComponent();
+            btnDelete.IsEnabled = false;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -75,6 +77,30 @@ namespace AppCollections
             txbDebug.Text += index + "\n";
 
             lsb1.ItemsSource = llistaPersones;
+            //*********************************************************
+            // Algunes proves amb Dictionary
+            Dictionary<String, Persona> personesPerNIF = new Dictionary<string, Persona>();
+            personesPerNIF.Add("11111111H", p0);
+            personesPerNIF.Add("12345678ZH", p3);
+
+            txbDebug.Text += "ContainsKey>>" + personesPerNIF.ContainsKey("11111111H") + "\n";
+            txbDebug.Text += "ContainsKey>>" + personesPerNIF.ContainsKey("1xxxxxxH") + "\n";
+            Persona ppp = personesPerNIF["11111111H"];
+            //Persona pFucked = personesPerNIF["1111111CCCCCCCCCCC1H"];
+            foreach( String clau in personesPerNIF.Keys)
+            {
+                txbDebug.Text += $"\t{clau}\n";
+            }
+            txbDebug.Text += "===================================\n";
+            foreach (Persona p in personesPerNIF.Values)
+            {
+                txbDebug.Text += $"\t{p}\n";
+            }
+            txbDebug.Text += "===================================\n";
+            foreach (KeyValuePair<String, Persona> entry in personesPerNIF)
+            {
+                txbDebug.Text += $"\t{entry.Key} - {entry.Value}\n";
+            }
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -82,7 +108,11 @@ namespace AppCollections
             String nomAInserir = txbNew.Text;
             Boolean esPotInserir = true;
             esPotInserir = this.esPotInserir();
-            long maxId = llistaPersones.Max(p => p.Id);
+            long maxId = 0;
+            if (llistaPersones.Count > 0)
+            {
+                maxId = llistaPersones.Max(p => p.Id);
+            }
 
             if (esPotInserir)
             {
@@ -116,6 +146,21 @@ namespace AppCollections
         private void txbNew_TextChanged(object sender, TextChangedEventArgs e)
         {
             btnAdd.IsEnabled = esPotInserir();
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            if (lsb1.SelectedIndex != -1)
+            {
+                llistaPersones.RemoveAt(lsb1.SelectedIndex);
+                lsb1.ItemsSource = null;
+                lsb1.ItemsSource = llistaPersones;
+            }
+        }
+
+        private void lsb1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            btnDelete.IsEnabled = lsb1.SelectedIndex != -1;
         }
     }
 }

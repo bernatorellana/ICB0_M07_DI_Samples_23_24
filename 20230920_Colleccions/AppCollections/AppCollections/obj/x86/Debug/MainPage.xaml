@@ -32,9 +32,9 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="auto"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <TextBox x:ConnectionId='5' x:Name="txbNew" Grid.Column="0" HorizontalAlignment="Stretch"  
+            <TextBox x:ConnectionId='6' x:Name="txbNew" Grid.Column="0" HorizontalAlignment="Stretch"  
                      Margin="10"                                 ></TextBox>
-            <Button x:ConnectionId='6' x:Name="btnAdd" 
+            <Button x:ConnectionId='7' x:Name="btnAdd" 
                 Grid.Column="1" 
                     FontFamily="Segoe MDL2 Assets" FontSize="30" 
                                         
@@ -44,12 +44,20 @@
         <StackPanel  Grid.Column="1" Grid.Row="2"
                      HorizontalAlignment="Center"
                      Orientation="Horizontal">
-            <Button  FontFamily="Segoe MDL2 Assets" FontSize="30" 
+            <Button x:ConnectionId='5' FontFamily="Segoe MDL2 Assets" FontSize="30" 
+                     Margin="0 0 200 0"
+                    x:Name="btnDelete"
+                                           
+                    >&#xE74D;
+                </Button>
+                <Button  FontFamily="Segoe MDL2 Assets" FontSize="30" 
                      Margin="40 0 0 0">&#xE898;</Button>
             <Button  Margin="40 0 0 0" FontFamily="Segoe MDL2 Assets" FontSize="30" >&#xE896;</Button>
 
         </StackPanel>
-        <ListBox x:ConnectionId='3' x:Name="lsb1" Grid.Column="1" Grid.Row="1" Margin="10" ScrollViewer.VerticalScrollBarVisibility="Visible"></ListBox>
+        <ListBox x:ConnectionId='3' x:Name="lsb1" 
+                                                         
+                 Grid.Column="1" Grid.Row="1" Margin="10" ScrollViewer.VerticalScrollBarVisibility="Visible"></ListBox>
         <ListBox x:ConnectionId='4' x:Name="lsb2"  Grid.Column="1" Grid.Row="3" Margin="10"></ListBox>
         
     </Grid>
