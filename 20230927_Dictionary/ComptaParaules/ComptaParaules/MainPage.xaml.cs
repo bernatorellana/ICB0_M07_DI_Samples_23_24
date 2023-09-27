@@ -32,7 +32,7 @@ namespace ComptaParaules
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
             ComptadorParaules cp = new ComptadorParaules();
-             await cp.carregaArxiuAsync("Dracula.txt");           
+             await cp.carregaArxiuAsync("RomeoAndJuliet.txt");           
         }
     }
 }
