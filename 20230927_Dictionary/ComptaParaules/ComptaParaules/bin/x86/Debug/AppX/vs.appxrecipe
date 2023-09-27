@@ -30,13 +30,13 @@
     <AppXManifest Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20230927_Dictionary\ComptaParaules\ComptaParaules\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-27T18:37:57.824</Modified>
+      <Modified>2023-09-27T19:25:42.469</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20230927_Dictionary\ComptaParaules\ComptaParaules\bin\x86\Debug\ComptaParaules.exe">
       <PackagePath>entrypoint\ComptaParaules.exe</PackagePath>
-      <Modified>2023-09-27T18:37:57.024</Modified>
+      <Modified>2023-09-27T19:25:41.390</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -90,15 +90,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20230927_Dictionary\ComptaParaules\ComptaParaules\bin\x86\Debug\ComptaParaules.xr.xml">
       <PackagePath>ComptaParaules.xr.xml</PackagePath>
-      <Modified>2023-09-27T17:53:03.980</Modified>
+      <Modified>2023-09-27T19:25:41.090</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20230927_Dictionary\ComptaParaules\ComptaParaules\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-09-27T18:37:56.879</Modified>
+      <Modified>2023-09-27T19:25:41.181</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20230927_Dictionary\ComptaParaules\ComptaParaules\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-09-27T18:37:56.924</Modified>
+      <Modified>2023-09-27T19:25:41.233</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -106,11 +106,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20230927_Dictionary\ComptaParaules\ComptaParaules\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-09-27T17:53:43.126</Modified>
+      <Modified>2023-09-27T19:25:41.978</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20230927_Dictionary\ComptaParaules\ComptaParaules\bin\x86\Debug\Core\ComptaParaules.exe">
       <PackagePath>ComptaParaules.exe</PackagePath>
-      <Modified>2023-09-27T18:37:57.765</Modified>
+      <Modified>2023-09-27T19:25:42.401</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

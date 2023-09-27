@@ -32,7 +32,23 @@ namespace ComptaParaules
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
             ComptadorParaules cp = new ComptadorParaules();
-             await cp.carregaArxiuAsync("RomeoAndJuliet.txt");           
+            Dictionary<string, int> paraules1 = await cp.carregaArxiuAsync("Dracula.txt");           
+            Dictionary<string, int> paraules2 = await cp.carregaArxiuAsync("RomeoAndJuliet.txt");
+
+            //var llista = paraules1.Intersect(paraules2).ToList();
+
+            List<Parell> resultatFinal = new List<Parell>();
+            foreach(var parell in paraules1)
+            {
+                if (paraules2.ContainsKey(parell.Key))
+                {
+                    int recompteConjunt = parell.Value + paraules2[parell.Key];
+      
+                    resultatFinal.Add(new Parell(parell.Key, recompteConjunt));
+                }
+            }
+            lsbResultat.ItemsSource = resultatFinal;
+        
         }
     }
 }

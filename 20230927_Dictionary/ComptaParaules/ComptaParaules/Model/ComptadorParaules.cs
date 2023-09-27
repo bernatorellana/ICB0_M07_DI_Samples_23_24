@@ -14,7 +14,7 @@ namespace ComptaParaules.Model
 {
     internal class ComptadorParaules
     {
-        public async Task carregaArxiuAsync(String arxiu)
+        public async Task<Dictionary<string, int>>  carregaArxiuAsync(String arxiu)
         {
             var file = await StorageFile.GetFileFromApplicationUriAsync(
                 new Uri($"ms-appx:///Assets/{arxiu}"));
@@ -58,10 +58,11 @@ namespace ComptaParaules.Model
                 //}
                 List<KeyValuePair<string,int>> parellsOrdenats =
                     recompte.ToList().OrderByDescending(parell=>parell.Value).ToList();
-                foreach (var e in parellsOrdenats)
-                {
-                    Debug.WriteLine(e.Key + ": " + e.Value);
-                }
+                //foreach (var e in parellsOrdenats)
+                //{
+                //    Debug.WriteLine(e.Key + ": " + e.Value);
+                //}
+                return recompte;
                 //List<Order> SortedList = objListOrder.OrderBy(o=>o.OrderDate).ToList();
             }
         }

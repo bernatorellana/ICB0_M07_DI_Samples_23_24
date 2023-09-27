@@ -11,7 +11,27 @@
     >
 
     <Grid>
-
+        <ListBox x:ConnectionId='2' x:Name="lsbResultat">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalAlignment"
+                            Value="Stretch"></Setter>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                        <Border BorderThickness="1" BorderBrush="Black"
+                                Padding="20">
+                            <TextBlock Text="{Binding Clau}"></TextBlock>
+                        </Border>
+                        <Border BorderThickness="1" BorderBrush="Black" Padding="20">
+                            <TextBlock Text="{Binding Valor}"></TextBlock>
+                        </Border>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Page>
 
