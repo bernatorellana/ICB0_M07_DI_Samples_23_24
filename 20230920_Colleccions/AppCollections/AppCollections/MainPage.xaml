@@ -50,15 +50,17 @@
                     Click="btnDelete_Click"
                     >&#xE74D;
                 </Button>
-                <Button  FontFamily="Segoe MDL2 Assets" FontSize="30" 
+                <Button x:Name="btnUp" Click="btnUp_Click" FontFamily="Segoe MDL2 Assets" FontSize="30" 
                      Margin="40 0 0 0">&#xE898;</Button>
-            <Button  Margin="40 0 0 0" FontFamily="Segoe MDL2 Assets" FontSize="30" >&#xE896;</Button>
+            <Button x:Name="btnDown" Click="btnDown_Click"  Margin="40 0 0 0" FontFamily="Segoe MDL2 Assets" FontSize="30" >&#xE896;</Button>
 
         </StackPanel>
         <ListBox x:Name="lsb1" 
                  SelectionChanged="lsb1_SelectionChanged"
                  Grid.Column="1" Grid.Row="1" Margin="10" ScrollViewer.VerticalScrollBarVisibility="Visible"></ListBox>
-        <ListBox x:Name="lsb2"  Grid.Column="1" Grid.Row="3" Margin="10"></ListBox>
+        <ListBox x:Name="lsb2"
+                 SelectionChanged="lsb2_SelectionChanged"
+                 Grid.Column="1" Grid.Row="3" Margin="10"></ListBox>
         
     </Grid>
 </Page>

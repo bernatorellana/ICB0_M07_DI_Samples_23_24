@@ -25,10 +25,42 @@ namespace AppCollections
     public sealed partial class MainPage : Page
     {
         private List<Persona> llistaPersones;
+        private List<Persona> llistaPersones2;
         public MainPage()
         {
-            this.InitializeComponent();
-            btnDelete.IsEnabled = false;
+            this.InitializeComponent(); 
+            
+        }
+
+        private bool pucMoureALaltreLlista(ListBox origen, ListBox desti)
+        {
+            if (origen.SelectedIndex != -1 && desti.ItemsSource!=null)
+            {
+                Persona seleccionada = (Persona)origen.SelectedItem;
+                bool found = false;
+                foreach (Persona p in (List<Persona>)desti.ItemsSource)
+                {
+                    if (seleccionada.Name == p.Name)
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+                return !found;
+            } else
+            {
+                return false;
+            }
+        }
+
+        private void actualitzaBotonsUpAndDown()
+        {
+            btnDelete.IsEnabled = lsb1.SelectedIndex != -1 || lsb2.SelectedIndex != -1;
+            btnUp.IsEnabled = lsb2.SelectedIndex != -1;
+            btnDown.IsEnabled = lsb1.SelectedIndex != -1;
+
+            btnUp.IsEnabled = pucMoureALaltreLlista(lsb2, lsb1);
+            btnDown.IsEnabled = pucMoureALaltreLlista(lsb1, lsb2);
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -42,6 +74,7 @@ namespace AppCollections
 
             // Creació d'una llista de persones
             llistaPersones = new List<Persona>();
+            llistaPersones2 = new List<Persona>();
             llistaPersones.Add(p0);
             llistaPersones.Add(p1);
             llistaPersones.Add(p2);
@@ -77,6 +110,7 @@ namespace AppCollections
             txbDebug.Text += index + "\n";
 
             lsb1.ItemsSource = llistaPersones;
+            lsb2.ItemsSource = llistaPersones2;
             //*********************************************************
             // Algunes proves amb Dictionary
             Dictionary<String, Persona> personesPerNIF = new Dictionary<string, Persona>();
@@ -101,6 +135,8 @@ namespace AppCollections
             {
                 txbDebug.Text += $"\t{entry.Key} - {entry.Value}\n";
             }
+
+            actualitzaBotonsUpAndDown();
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -152,15 +188,46 @@ namespace AppCollections
         {
             if (lsb1.SelectedIndex != -1)
             {
-                llistaPersones.RemoveAt(lsb1.SelectedIndex);
-                lsb1.ItemsSource = null;
-                lsb1.ItemsSource = llistaPersones;
+                llistaPersones.RemoveAt(lsb1.SelectedIndex); 
             }
+            if (lsb2.SelectedIndex != -1)
+            {
+                llistaPersones2.RemoveAt(lsb2.SelectedIndex);
+            }
+            updateSources();
         }
+        private void updateSources() {
+            lsb1.ItemsSource = null;
+            lsb1.ItemsSource = llistaPersones;
+            lsb2.ItemsSource = null;
+            lsb2.ItemsSource = llistaPersones2;
+        }
+
 
         private void lsb1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            btnDelete.IsEnabled = lsb1.SelectedIndex != -1;
+            actualitzaBotonsUpAndDown();
+        }
+
+        private void btnUp_Click(object sender, RoutedEventArgs e)
+        {
+            Persona p = (Persona)lsb2.SelectedItem;
+            llistaPersones.Add(p);
+            llistaPersones2.Remove(p);
+            updateSources();
+        }
+
+        private void btnDown_Click(object sender, RoutedEventArgs e)
+        {
+            Persona p = (Persona)lsb1.SelectedItem;
+            llistaPersones2.Add(p);
+            llistaPersones.Remove(p);
+            updateSources();
+        }
+
+        private void lsb2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            actualitzaBotonsUpAndDown();
         }
     }
 }
