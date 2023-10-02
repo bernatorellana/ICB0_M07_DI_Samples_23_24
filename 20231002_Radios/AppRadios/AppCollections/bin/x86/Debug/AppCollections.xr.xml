@@ -20,6 +20,13 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ListView" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Orientation" />
+      <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="AppCollections.MainPage" />
   </Roots.RootTypes>

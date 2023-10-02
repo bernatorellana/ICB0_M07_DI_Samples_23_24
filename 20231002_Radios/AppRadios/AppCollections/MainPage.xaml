@@ -17,6 +17,15 @@
         </Grid.ColumnDefinitions>
 
         <ListView x:Name="lsvPersones" Grid.Column="0"></ListView>
-        <StackPanel Orientation="Vertical" Grid.Column="1"></StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="1">
+
+            <RadioButton x:Name="rdoLevelNoob">Noob</RadioButton>
+            <RadioButton x:Name="rdoLevelAverage">Average</RadioButton>
+            <RadioButton x:Name="rdoLevelPro">Pro</RadioButton>
+            <RadioButton x:Name="rdoLevelHacker">Hacker</RadioButton>
+            <RadioButton x:Name="rdoLevelGod">God</RadioButton>
+
+        
+        </StackPanel>
     </Grid>
 </Page>

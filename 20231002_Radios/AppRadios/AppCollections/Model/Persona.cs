@@ -11,6 +11,8 @@ namespace AppCollections.Model
         private long id;
         private string name;
         private int age;
+        private bool archived;
+        private Level level;
 
         public Persona(long id, string name, int age)
         {
@@ -39,4 +41,5 @@ namespace AppCollections.Model
             return $"ID:{Id}, Name:{Name}, Age:{Age}";
         }
     }
+
 }
