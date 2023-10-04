@@ -19,13 +19,7 @@
         <ListView x:ConnectionId='2' x:Name="lsvPersones" Grid.Column="0"
                                                                  
                   ></ListView>
-        <StackPanel Orientation="Vertical" Grid.Column="1">
-
-            <RadioButton x:ConnectionId='3' x:Name="rdoLevelNoob"                               >Noob</RadioButton>
-            <RadioButton x:ConnectionId='4' x:Name="rdoLevelAverage"                                  >Average</RadioButton>
-            <RadioButton x:ConnectionId='5' x:Name="rdoLevelPro"                              >Pro</RadioButton>
-            <RadioButton x:ConnectionId='6' x:Name="rdoLevelHacker"                                 >Hacker</RadioButton>
-            <RadioButton x:ConnectionId='7' x:Name="rdoLevelGod"                              >God</RadioButton>
+        <StackPanel x:ConnectionId='3' x:Name="stkRadiosLevel" Orientation="Vertical" Grid.Column="1">
 
         
         </StackPanel>

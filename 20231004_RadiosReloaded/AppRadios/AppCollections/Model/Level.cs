@@ -12,6 +12,7 @@ namespace AppCollections.Model
         AVERAGE,
         PRO,
         HACKER,
-        GOD
+        GOD,
+        LA_HOSTIA_EN_VINAGRE
     }
 }

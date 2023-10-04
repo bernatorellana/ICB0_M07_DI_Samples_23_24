@@ -22,11 +22,6 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Orientation" />
-      <RootProperty Name="Children" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
-      <RootProperty Name="Content" />
-      <RootEvent Name="Checked" />
     </RootType>
     <RootType FullName="AppCollections.MainPage" />
   </Roots.RootTypes>

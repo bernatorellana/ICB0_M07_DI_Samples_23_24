@@ -10262,11 +10262,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\ICB0_M07_DI_Samples_23_24\\20231002_Radios\\AppRadios\\AppCollections\\AppCollections.csproj",
+      "projectUniqueName": "E:\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\ICB0_M07_DI_Samples_23_24\\20231004_RadiosReloaded\\AppRadios\\AppCollections\\AppCollections.csproj",
       "projectName": "AppCollections",
-      "projectPath": "E:\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\ICB0_M07_DI_Samples_23_24\\20231002_Radios\\AppRadios\\AppCollections\\AppCollections.csproj",
+      "projectPath": "E:\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\ICB0_M07_DI_Samples_23_24\\20231004_RadiosReloaded\\AppRadios\\AppCollections\\AppCollections.csproj",
       "packagesPath": "C:\\Users\\Usuari\\.nuget\\packages\\",
-      "outputPath": "E:\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\ICB0_M07_DI_Samples_23_24\\20231002_Radios\\AppRadios\\AppCollections\\obj\\",
+      "outputPath": "E:\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\ICB0_M07_DI_Samples_23_24\\20231004_RadiosReloaded\\AppRadios\\AppCollections\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>8cbfe9fc-24ea-44cc-8dc3-837903dde28d</PackageIdentityName>
     <PackageIdentityPublisher>CN=Usuari</PackageIdentityPublisher>
-    <IntermediateOutputPath>E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231002_Radios\AppRadios\AppCollections\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231004_RadiosReloaded\AppRadios\AppCollections\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231002_Radios\AppRadios\AppCollections\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231004_RadiosReloaded\AppRadios\AppCollections\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>605AC7BBAE5EBDE4FFF928B4AB0CC0BF147767B9DC811E799AC62C605C671D15</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>8cbfe9fc-24ea-44cc-8dc3-837903dde28d_1.0.0.0_x86__n82rqfc3nm07y</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>8cbfe9fc-24ea-44cc-8dc3-837903dde28d_n82rqfc3nm07y!App</RegisteredUserModeAppID>
@@ -27,82 +27,82 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231002_Radios\AppRadios\AppCollections\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231004_RadiosReloaded\AppRadios\AppCollections\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-10-04T18:08:43.345</Modified>
+      <Modified>2023-10-04T18:37:01.974</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231002_Radios\AppRadios\AppCollections\bin\x86\Debug\AppCollections.exe">
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231004_RadiosReloaded\AppRadios\AppCollections\bin\x86\Debug\AppCollections.exe">
       <PackagePath>entrypoint\AppCollections.exe</PackagePath>
-      <Modified>2023-10-04T18:08:42.329</Modified>
+      <Modified>2023-10-04T18:37:01.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2022-06-10T20:24:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231002_Radios\AppRadios\AppCollections\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231004_RadiosReloaded\AppRadios\AppCollections\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2023-09-20T17:42:27.633</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231002_Radios\AppRadios\AppCollections\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231004_RadiosReloaded\AppRadios\AppCollections\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2023-06-26T05:01:36.680</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231002_Radios\AppRadios\AppCollections\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231004_RadiosReloaded\AppRadios\AppCollections\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-06-26T05:01:36.681</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231002_Radios\AppRadios\AppCollections\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231004_RadiosReloaded\AppRadios\AppCollections\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-06-26T05:01:36.681</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231002_Radios\AppRadios\AppCollections\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231004_RadiosReloaded\AppRadios\AppCollections\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-06-26T05:01:36.681</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231002_Radios\AppRadios\AppCollections\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231004_RadiosReloaded\AppRadios\AppCollections\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-06-26T05:01:36.681</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231002_Radios\AppRadios\AppCollections\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231004_RadiosReloaded\AppRadios\AppCollections\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-06-26T05:01:36.681</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231002_Radios\AppRadios\AppCollections\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231004_RadiosReloaded\AppRadios\AppCollections\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-06-26T05:01:36.682</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231002_Radios\AppRadios\AppCollections\bin\x86\Debug\AppCollections.xr.xml">
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231004_RadiosReloaded\AppRadios\AppCollections\bin\x86\Debug\AppCollections.xr.xml">
       <PackagePath>AppCollections.xr.xml</PackagePath>
-      <Modified>2023-10-04T18:08:42.108</Modified>
+      <Modified>2023-10-04T18:19:48.546</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231002_Radios\AppRadios\AppCollections\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231004_RadiosReloaded\AppRadios\AppCollections\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-10-04T18:08:42.184</Modified>
+      <Modified>2023-10-04T18:37:00.907</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231002_Radios\AppRadios\AppCollections\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231004_RadiosReloaded\AppRadios\AppCollections\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-10-04T18:08:42.224</Modified>
+      <Modified>2023-10-04T18:37:00.945</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2018-04-19T20:01:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231002_Radios\AppRadios\AppCollections\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231004_RadiosReloaded\AppRadios\AppCollections\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <Modified>2023-10-02T17:21:40.255</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231002_Radios\AppRadios\AppCollections\bin\x86\Debug\Core\AppCollections.exe">
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231004_RadiosReloaded\AppRadios\AppCollections\bin\x86\Debug\Core\AppCollections.exe">
       <PackagePath>AppCollections.exe</PackagePath>
-      <Modified>2023-10-04T18:08:43.240</Modified>
+      <Modified>2023-10-04T18:37:01.927</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

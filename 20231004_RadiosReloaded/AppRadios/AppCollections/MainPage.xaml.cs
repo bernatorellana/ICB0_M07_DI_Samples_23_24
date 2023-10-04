@@ -25,14 +25,33 @@ namespace AppCollections
     public sealed partial class MainPage : Page
     {
         private List<Persona> llistaPersones;
-
+        private Dictionary<Level, RadioButton> radiosLevel; 
 
         public MainPage()
         {
-            this.InitializeComponent(); 
+            this.InitializeComponent();
+
+            radiosLevel = new Dictionary<Level, RadioButton>();
+            // Crear la llista de radiobuttons del nivell
+            foreach (Level l in Enum.GetValues(typeof(Level)))
+            {
+                RadioButton radioButton = new RadioButton();
+                radioButton.Content=l.ToString();
+                stkRadiosLevel.Children.Add(radioButton);
+                radiosLevel[l] = radioButton;
+                radioButton.Tag = l;
+                // Programar els events del RadioButton
+                radioButton.Checked += RadioButton_Checked;
+                
+            }
         }
 
-        
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+            Persona p = lsvPersones.SelectedItem as Persona;
+            p.Level = (Level) rb.Tag;           
+        }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -60,7 +79,7 @@ namespace AppCollections
         private void lsvPersones_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Persona p = (Persona)lsvPersones.SelectedItem;
-
+            radiosLevel[p.Level].IsChecked = true;
         }
 
     }

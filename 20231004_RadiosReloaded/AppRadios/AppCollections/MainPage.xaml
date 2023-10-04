@@ -19,7 +19,7 @@
         <ListView x:Name="lsvPersones" Grid.Column="0"
                   SelectionChanged="lsvPersones_SelectionChanged"
                   ></ListView>
-        <StackPanel Orientation="Vertical" Grid.Column="1">
+        <StackPanel x:Name="stkRadiosLevel" Orientation="Vertical" Grid.Column="1">
 
         
         </StackPanel>

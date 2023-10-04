@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9gCkrgO55d+zwJG4j7KyJkA0xTJUoGbCVo57cKAw7NrnzmwZbnzWMH6KF7eebBTzJ/XrpYWtToEbfzvbxwJaGw==",
+  "dgSpecHash": "EIg8Dz3NhdV3ZehvsYCQ3EdXHNIUqAQ7ICPNDoC7H+7nANAPWZ579vbiVY+ITQVmCJxPEYD+u9BGQ105hlGPuw==",
   "success": true,
-  "projectFilePath": "E:\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\ICB0_M07_DI_Samples_23_24\\20231002_Radios\\AppRadios\\AppCollections\\AppCollections.csproj",
+  "projectFilePath": "E:\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\ICB0_M07_DI_Samples_23_24\\20231004_RadiosReloaded\\AppRadios\\AppCollections\\AppCollections.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.12-rel-31116-00\\microsoft.net.native.compiler.2.2.12-rel-31116-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.14\\microsoft.net.uwpcoreruntimesdk.2.2.14.nupkg.sha512",
