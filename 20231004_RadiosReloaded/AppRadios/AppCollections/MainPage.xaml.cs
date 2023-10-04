@@ -30,6 +30,7 @@ namespace AppCollections
         public MainPage()
         {
             this.InitializeComponent();
+            stkCard.Visibility = Visibility.Collapsed;
 
             radiosLevel = new Dictionary<Level, RadioButton>();
             // Crear la llista de radiobuttons del nivell
@@ -78,9 +79,41 @@ namespace AppCollections
 
         private void lsvPersones_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Persona p = (Persona)lsvPersones.SelectedItem;
+            Persona p = getPersonaActual();
             radiosLevel[p.Level].IsChecked = true;
+            chkArchived.IsChecked= p.Archived;
+
+            stkCard.Visibility = (p != null)?Visibility.Visible:Visibility.Collapsed;
         }
+
+        private Persona getPersonaActual()
+        {
+            return (Persona)lsvPersones.SelectedItem;
+        }
+
+        private void chkArchived_Checked(object sender, RoutedEventArgs e)
+        {
+            setArchive(true);
+        }
+        private void chkArchived_Unchecked(object sender, RoutedEventArgs e)
+        {
+            setArchive(false);
+        }
+        private void setArchive(bool archive)
+        {
+            Persona p = getPersonaActual();
+            if (p != null)
+            {
+                p.Archived = archive;
+
+                foreach (RadioButton r in radiosLevel.Values)
+                {
+                    r.IsEnabled = !archive;
+                }
+            }
+
+        }
+
 
     }
 }

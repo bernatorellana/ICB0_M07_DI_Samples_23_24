@@ -20,11 +20,13 @@ namespace AppCollections.Model
             Name = name;
             Age = age;
             Level = level;
+            archived = false;
         }
 
         public long Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public int Age { get => age; set => age = value; }
+        public bool Archived { get => archived; set => archived = value; }
         internal Level Level { get => level; set => level = value; }
 
         public override bool Equals(object obj)

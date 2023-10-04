@@ -10,7 +10,7 @@
                         
     >
 
-    <Grid >
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="1*"/>
@@ -19,9 +19,11 @@
         <ListView x:ConnectionId='2' x:Name="lsvPersones" Grid.Column="0"
                                                                  
                   ></ListView>
-        <StackPanel x:ConnectionId='3' x:Name="stkRadiosLevel" Orientation="Vertical" Grid.Column="1">
-
-        
+        <StackPanel x:ConnectionId='3' x:Name="stkCard" Orientation="Vertical" Grid.Column="1">
+            <StackPanel x:ConnectionId='4'  x:Name="stkRadiosLevel" Orientation="Vertical" Grid.Column="1">
+            </StackPanel>
+            <AppBarSeparator></AppBarSeparator>
+            <CheckBox x:ConnectionId='5' x:Name="chkArchived"                                                                ></CheckBox>
         </StackPanel>
     </Grid>
 </Page>

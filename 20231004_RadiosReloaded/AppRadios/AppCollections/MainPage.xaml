@@ -10,7 +10,7 @@
     Loaded="Page_Loaded"
     >
 
-    <Grid >
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="1*"/>
@@ -19,9 +19,11 @@
         <ListView x:Name="lsvPersones" Grid.Column="0"
                   SelectionChanged="lsvPersones_SelectionChanged"
                   ></ListView>
-        <StackPanel x:Name="stkRadiosLevel" Orientation="Vertical" Grid.Column="1">
-
-        
+        <StackPanel x:Name="stkCard" Orientation="Vertical" Grid.Column="1">
+            <StackPanel  x:Name="stkRadiosLevel" Orientation="Vertical" Grid.Column="1">
+            </StackPanel>
+            <AppBarSeparator></AppBarSeparator>
+            <CheckBox x:Name="chkArchived" Checked="chkArchived_Checked" Unchecked="chkArchived_Unchecked"></CheckBox>
         </StackPanel>
     </Grid>
 </Page>
