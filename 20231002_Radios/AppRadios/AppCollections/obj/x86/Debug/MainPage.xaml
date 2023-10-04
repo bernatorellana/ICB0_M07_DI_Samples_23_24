@@ -12,22 +12,22 @@
 
     <Grid >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <ListView x:ConnectionId='2' x:Name="lsvPersones" Grid.Column="0"></ListView>
+        <ListView x:ConnectionId='2' x:Name="lsvPersones" Grid.Column="0"
+                                                                 
+                  ></ListView>
         <StackPanel Orientation="Vertical" Grid.Column="1">
 
-            <RadioButton x:ConnectionId='3' x:Name="chbLevelAverage">Average</RadioButton>
-            <RadioButton x:ConnectionId='4' x:Name="chbLevelPro">Pro</RadioButton>
-            <RadioButton x:ConnectionId='5' x:Name="chbLevelGod">God</RadioButton>
+            <RadioButton x:ConnectionId='3' x:Name="rdoLevelNoob"                               >Noob</RadioButton>
+            <RadioButton x:ConnectionId='4' x:Name="rdoLevelAverage"                                  >Average</RadioButton>
+            <RadioButton x:ConnectionId='5' x:Name="rdoLevelPro"                              >Pro</RadioButton>
+            <RadioButton x:ConnectionId='6' x:Name="rdoLevelHacker"                                 >Hacker</RadioButton>
+            <RadioButton x:ConnectionId='7' x:Name="rdoLevelGod"                              >God</RadioButton>
 
-            <Button>-----</Button>
-            <StackPanel Orientation="Vertical">
-                <RadioButton >Dona</RadioButton>
-                <RadioButton >Home</RadioButton>
-            </StackPanel>
+        
         </StackPanel>
     </Grid>
 </Page>

@@ -12,18 +12,20 @@
 
     <Grid >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <ListView x:Name="lsvPersones" Grid.Column="0"></ListView>
+        <ListView x:Name="lsvPersones" Grid.Column="0"
+                  SelectionChanged="lsvPersones_SelectionChanged"
+                  ></ListView>
         <StackPanel Orientation="Vertical" Grid.Column="1">
 
-            <RadioButton x:Name="rdoLevelNoob">Noob</RadioButton>
-            <RadioButton x:Name="rdoLevelAverage">Average</RadioButton>
-            <RadioButton x:Name="rdoLevelPro">Pro</RadioButton>
-            <RadioButton x:Name="rdoLevelHacker">Hacker</RadioButton>
-            <RadioButton x:Name="rdoLevelGod">God</RadioButton>
+            <RadioButton x:Name="rdoLevelNoob" Checked="rdoLevelNoob_Checked">Noob</RadioButton>
+            <RadioButton x:Name="rdoLevelAverage" Checked="rdoLevelAverage_Checked">Average</RadioButton>
+            <RadioButton x:Name="rdoLevelPro" Checked="rdoLevelPro_Checked">Pro</RadioButton>
+            <RadioButton x:Name="rdoLevelHacker" Checked="rdoLevelHacker_Checked">Hacker</RadioButton>
+            <RadioButton x:Name="rdoLevelGod" Checked="rdoLevelGod_Checked">God</RadioButton>
 
         
         </StackPanel>

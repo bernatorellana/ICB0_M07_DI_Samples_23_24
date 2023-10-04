@@ -14,16 +14,18 @@ namespace AppCollections.Model
         private bool archived;
         private Level level;
 
-        public Persona(long id, string name, int age)
+        public Persona(long id, string name, int age, Level level)
         {
             Id = id;
             Name = name;
             Age = age;
+            Level = level;
         }
 
         public long Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public int Age { get => age; set => age = value; }
+        internal Level Level { get => level; set => level = value; }
 
         public override bool Equals(object obj)
         {
