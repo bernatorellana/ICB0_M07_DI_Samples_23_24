@@ -34,8 +34,8 @@
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231006_Memory\Memory\Memory\Assets\cards\back.jpg">
       <PackagePath>Assets\cards\back.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231006_Memory\Memory\Memory\Assets\cards\i10.jpg">
-      <PackagePath>Assets\cards\i10.jpg</PackagePath>
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231006_Memory\Memory\Memory\Assets\cards\i0.jpg">
+      <PackagePath>Assets\cards\i0.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231006_Memory\Memory\Memory\Assets\cards\i2.jpg">
       <PackagePath>Assets\cards\i2.jpg</PackagePath>

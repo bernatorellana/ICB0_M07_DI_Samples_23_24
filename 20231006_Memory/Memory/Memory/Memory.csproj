@@ -131,7 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\cards\back.jpg" />
-    <Content Include="Assets\cards\i10.jpg" />
+    <Content Include="Assets\cards\i0.jpg" />
     <Content Include="Assets\cards\i2.jpg" />
     <Content Include="Assets\cards\i3.jpg" />
     <Content Include="Assets\cards\i4.jpg" />

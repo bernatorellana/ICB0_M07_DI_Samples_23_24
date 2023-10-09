@@ -30,13 +30,13 @@
     <AppXManifest Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231006_Memory\Memory\Memory\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-10-06T18:27:49.480</Modified>
+      <Modified>2023-10-09T16:40:55.996</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231006_Memory\Memory\Memory\bin\x86\Debug\Memory.exe">
       <PackagePath>entrypoint\Memory.exe</PackagePath>
-      <Modified>2023-10-06T18:27:48.988</Modified>
+      <Modified>2023-10-09T16:40:55.144</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -46,8 +46,8 @@
       <PackagePath>Assets\cards\back.jpg</PackagePath>
       <Modified>2023-10-06T17:48:55.452</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231006_Memory\Memory\Memory\Assets\cards\i10.jpg">
-      <PackagePath>Assets\cards\i10.jpg</PackagePath>
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231006_Memory\Memory\Memory\Assets\cards\i0.jpg">
+      <PackagePath>Assets\cards\i0.jpg</PackagePath>
       <Modified>2023-10-06T17:48:55.481</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231006_Memory\Memory\Memory\Assets\cards\i2.jpg">
@@ -130,11 +130,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231006_Memory\Memory\Memory\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-10-06T18:27:48.928</Modified>
+      <Modified>2023-10-09T16:40:55.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231006_Memory\Memory\Memory\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-10-06T18:27:48.929</Modified>
+      <Modified>2023-10-09T16:40:55.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -142,11 +142,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231006_Memory\Memory\Memory\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-10-06T17:52:00.951</Modified>
+      <Modified>2023-10-09T16:40:55.711</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231006_Memory\Memory\Memory\bin\x86\Debug\Core\Memory.exe">
       <PackagePath>Memory.exe</PackagePath>
-      <Modified>2023-10-06T18:27:49.471</Modified>
+      <Modified>2023-10-09T16:40:55.987</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
