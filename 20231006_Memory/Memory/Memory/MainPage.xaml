@@ -7,22 +7,26 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <StackPanel Orientation="Horizontal">
+        <Grid x:Name="grdMemory" RowSpacing="10" ColumnSpacing="10">
+            <!--<Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image Source="/Assets/cards/i1.jpg" Grid.Row="2" Grid.Column="3"></Image>
+            <Image Source="/Assets/cards/back.jpg" Visibility="Collapsed" Grid.Row="2" Grid.Column="3"></Image>-->
 
-    <Grid x:Name="grdMemory" RowSpacing="10" ColumnSpacing="10">
-        <!--<Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Image Source="/Assets/cards/i1.jpg" Grid.Row="2" Grid.Column="3"></Image>
-        <Image Source="/Assets/cards/back.jpg" Visibility="Collapsed" Grid.Row="2" Grid.Column="3"></Image>-->
-
-    </Grid>
+        </Grid>
+        <Border BorderBrush="Black" BorderThickness="3" Width="100">
+                <TextBlock HorizontalAlignment="Center" x:Name="txbPunts" Text="9" FontSize="60" Padding="10"></TextBlock>
+        </Border>
+    </StackPanel>
 </Page>

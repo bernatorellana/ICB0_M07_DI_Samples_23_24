@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -27,6 +28,11 @@ namespace Memory
         const int COLUMNES = 5;
         const int CARTES = (int)(FILES*COLUMNES*0.5);
         int[,] cartes = new int[FILES,COLUMNES];
+        int punts = 0;
+        List<Image> cartesSeleccionades = new List<Image>();
+        Boolean finalPartida = false;
+        Boolean enEspera = false;
+
         //   codicarta,# vegades posada
         Dictionary<int, int> cartesColocades = new Dictionary<int, int>();
         private void incialitzaTauler()
@@ -63,6 +69,7 @@ namespace Memory
 
             incialitzaTauler();
 
+            mostraPunts();
 
             // Inicialitzar el grid de joc
             for (int i = 0; i < COLUMNES; i++)
@@ -75,12 +82,74 @@ namespace Memory
                 RowDefinition c = new RowDefinition();
                 grdMemory.RowDefinitions.Add(c);
             }
-            //   <Image Source="/Assets/cards/i1.jpg" Grid.Row="2" Grid.Column="3"></Image>
-            Image im = new Image();
-            im.Source = new BitmapImage(new Uri("ms-appx:///Assets/cards/i1.jpg"));
-            Grid.SetColumn(im, 3);
-            Grid.SetRow(im, 1);
-            grdMemory.Children.Add(im);
+            for (int c = 0; c < COLUMNES; c++)
+            {
+                for (int f = 0; f < FILES; f++)
+                {
+                    //   <Image Source="/Assets/cards/i1.jpg" Grid.Row="2" Grid.Column="3"></Image>
+                    
+                    Image im = new Image();
+                    int carta = this.cartes[f, c];
+                    im.Source = new BitmapImage(new Uri($"ms-appx:///Assets/cards/i{carta}.jpg"));
+                    Grid.SetColumn(im, c);
+                    Grid.SetRow(im, f);
+                    grdMemory.Children.Add(im);
+                    //------------------------------
+                    im = new Image();
+                    im.Source = new BitmapImage(new Uri($"ms-appx:///Assets/cards/back.jpg"));
+                    Grid.SetColumn(im, c);
+                    Grid.SetRow(im, f);
+                    grdMemory.Children.Add(im);
+                    im.Tapped += Im_Tapped;
+                    im.Tag = carta;
+
+                }
+            }
+
+
+        }
+
+        private async void Im_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            if (!finalPartida && !enEspera )
+            {
+                Image image = (sender as Image);
+                image.Opacity = 0;
+                cartesSeleccionades.Add(image);
+
+
+                if (cartesSeleccionades.Count==2)
+                {
+                    if(cartesSeleccionades[0].Tag.Equals(cartesSeleccionades[1].Tag))
+                    {
+                        punts++;
+                        mostraPunts();
+                        if (punts == CARTES)
+                        {
+                            this.finalPartida = true;
+                            mostraFinalPartida();
+                        }
+                    } else
+                    {
+                        enEspera = true;
+                        await Task.Delay(2000);
+                        cartesSeleccionades[0].Opacity = 1;
+                        cartesSeleccionades[1].Opacity = 1;
+                        enEspera = false;
+
+                    }
+                    cartesSeleccionades.Clear();
+                }
+            }
+        }
+
+        private void mostraPunts()
+        {
+            txbPunts.Text = punts + "";
+        }
+
+        private void mostraFinalPartida()
+        {
         }
     }
 }
