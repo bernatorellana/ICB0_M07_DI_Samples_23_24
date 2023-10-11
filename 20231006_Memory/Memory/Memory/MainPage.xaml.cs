@@ -136,7 +136,6 @@ namespace Memory
                         cartesSeleccionades[0].Opacity = 1;
                         cartesSeleccionades[1].Opacity = 1;
                         enEspera = false;
-
                     }
                     cartesSeleccionades.Clear();
                 }

@@ -1,0 +1,52 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="ListViewApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ListViewApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                        >
+  
+ 
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ListView x:ConnectionId='2'  x:Name="lsvPersones">
+
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="Background" Value="Red"></Setter>
+                </Style>
+            </ListView.ItemContainerStyle>
+
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--* Inici de fila * -->
+                    <Border BorderBrush="Aquamarine" BorderThickness="4">
+                        <Grid MaxWidth="300" Padding="40">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Id}"   Grid.Column="0"></TextBlock>
+                            <TextBlock Text="{Binding Name}" Grid.Column="1"></TextBlock>
+                            <TextBlock Text="{Binding Age}"  Grid.Column="2"></TextBlock>
+                        </Grid>
+                    </Border>
+                    <!--* Final de fila * -->
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </Grid>
+    
+</Page>
+
