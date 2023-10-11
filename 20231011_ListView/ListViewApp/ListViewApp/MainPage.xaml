@@ -26,20 +26,26 @@
                     <Setter Property="BorderThickness" Value="1"></Setter>
                 </Style>
             </ListView.ItemContainerStyle>
-
+            <!--<ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"></StackPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>-->
 
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <!--* Inici de fila * -->
-                        <Grid MaxWidth="300" Padding="40">
+                        <Grid MaxWidth="300" >
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding Id}"   Grid.Column="0"></TextBlock>
-                            <TextBlock Text="{Binding Name}" Grid.Column="1"></TextBlock>
-                            <TextBlock Text="{Binding Age}"  Grid.Column="2"></TextBlock>
+                        <Image Source="{Binding UrlPhoto}" Grid.Column="0"></Image>
+                            <TextBlock Text="{Binding Id}"   Grid.Column="1" Padding="40"></TextBlock>
+                            <TextBlock Text="{Binding Name}" Grid.Column="2" Padding="40"></TextBlock>
+                            <TextBlock Text="{Binding Age}"  Grid.Column="3" Padding="40"></TextBlock>
                         </Grid>
                     <!--* Final de fila * -->
                 </DataTemplate>

@@ -58,6 +58,12 @@ namespace ListViewApp.Model
         public string Name { get => name; set => name = value; }
         public int Age { get => age; set => age = value; }
 
+        public String UrlPhoto { get
+            {
+                return $"ms-appx:///Assets/f{Id}.png";
+            }
+        }
+
         public override bool Equals(object obj)
         {
             return obj is Persona persona &&
