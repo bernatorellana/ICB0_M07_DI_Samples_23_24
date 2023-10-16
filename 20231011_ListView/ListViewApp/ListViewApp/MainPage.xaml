@@ -4,7 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ListViewApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:view="using:ListViewApp.View"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     Loaded="Page_Loaded">
@@ -35,18 +36,29 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <!--* Inici de fila * -->
-                        <Grid MaxWidth="300" >
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                        <Image Source="{Binding UrlPhoto}" Grid.Column="0"></Image>
-                            <TextBlock Text="{Binding Id}"   Grid.Column="1" Padding="40"></TextBlock>
-                            <TextBlock Text="{Binding Name}" Grid.Column="2" Padding="40"></TextBlock>
-                            <TextBlock Text="{Binding Age}"  Grid.Column="3" Padding="40"></TextBlock>
-                        </Grid>
+                    <view:Fila></view:Fila>
+                    <!--<Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image  Source="{Binding UrlPhoto, FallbackValue='ms-appx:///Assets/f1.png'}"  VerticalAlignment="Center" Grid.Column="0"></Image>
+                        <TextBlock Text="{Binding Id, FallbackValue=1}" VerticalAlignment="Center"  Grid.Column="1" Padding="40"></TextBlock>
+                        <TextBlock Text="{Binding Name, FallbackValue=Pepita}" VerticalAlignment="Center" Grid.Column="2" Padding="20"></TextBlock>
+                        <TextBlock Text="{Binding Age, FallbackValue=23}" VerticalAlignment="Center"  Grid.Column="3" Padding="40"></TextBlock>
+                        <ListView Grid.Column="4" ItemsSource="{Binding Telefons}" >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="Gray" BorderThickness="1">
+                                        <TextBlock Text="{Binding}"></TextBlock>
+                                    </Border>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>-->
                     <!--* Final de fila * -->
                 </DataTemplate>
             </ListView.ItemTemplate>
