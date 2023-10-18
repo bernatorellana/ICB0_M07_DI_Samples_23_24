@@ -6,10 +6,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    Height="300"
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <Grid>
+    <Grid x:ConnectionId='2' x:Name="grdGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -19,7 +20,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
         </Grid.RowDefinitions>
         <Image  Source="{Binding UrlPhoto, FallbackValue='ms-appx:///Assets/f1.png'}"  VerticalAlignment="Center" Grid.Column="0"></Image>
         <TextBlock Text="{Binding Id, FallbackValue=1}" VerticalAlignment="Center"  Grid.Column="1" Padding="40"></TextBlock>
@@ -35,8 +36,8 @@
             </ListView.ItemTemplate>
         </ListView>
         <!-- segona fila -->
-        <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding Cap.Name, FallbackValue=KAPO Kapone}" VerticalAlignment="Center"  Padding="20"></TextBlock>
-
+        <!--<TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding Cap.Name, FallbackValue=KAPO Kapone}" VerticalAlignment="Center"  Padding="20"></TextBlock>-->
+        
     </Grid>
 </UserControl>
 

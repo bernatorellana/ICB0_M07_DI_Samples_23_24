@@ -189,17 +189,21 @@ namespace ListViewApp.ListViewApp_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[4];
+            _typeNameTable = new string[6];
             _typeNameTable[0] = "ListViewApp.View.Fila";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[2] = "ListViewApp.MainPage";
-            _typeNameTable[3] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[2] = "ListViewApp.Model.Persona";
+            _typeNameTable[3] = "Object";
+            _typeNameTable[4] = "ListViewApp.MainPage";
+            _typeNameTable[5] = "Windows.UI.Xaml.Controls.Page";
 
-            _typeTable = new global::System.Type[4];
+            _typeTable = new global::System.Type[6];
             _typeTable[0] = typeof(global::ListViewApp.View.Fila);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[2] = typeof(global::ListViewApp.MainPage);
-            _typeTable[3] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[2] = typeof(global::ListViewApp.Model.Persona);
+            _typeTable[3] = typeof(global::System.Object);
+            _typeTable[4] = typeof(global::ListViewApp.MainPage);
+            _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.Page);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -235,7 +239,7 @@ namespace ListViewApp.ListViewApp_XamlTypeInfo
         }
 
         private object Activate_0_Fila() { return new global::ListViewApp.View.Fila(); }
-        private object Activate_2_MainPage() { return new global::ListViewApp.MainPage(); }
+        private object Activate_4_MainPage() { return new global::ListViewApp.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -250,6 +254,7 @@ namespace ListViewApp.ListViewApp_XamlTypeInfo
             case 0:   //  ListViewApp.View.Fila
                 userType = new global::ListViewApp.ListViewApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.Activator = Activate_0_Fila;
+                userType.AddMemberName("LaPersona");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -258,14 +263,25 @@ namespace ListViewApp.ListViewApp_XamlTypeInfo
                 xamlType = new global::ListViewApp.ListViewApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  ListViewApp.MainPage
-                userType = new global::ListViewApp.ListViewApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_2_MainPage;
+            case 2:   //  ListViewApp.Model.Persona
+                userType = new global::ListViewApp.ListViewApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 3:   //  Windows.UI.Xaml.Controls.Page
+            case 3:   //  Object
+                xamlType = new global::ListViewApp.ListViewApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 4:   //  ListViewApp.MainPage
+                userType = new global::ListViewApp.ListViewApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::ListViewApp.ListViewApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -273,11 +289,32 @@ namespace ListViewApp.ListViewApp_XamlTypeInfo
         }
 
 
+        private object get_0_Fila_LaPersona(object instance)
+        {
+            var that = (global::ListViewApp.View.Fila)instance;
+            return that.LaPersona;
+        }
+        private void set_0_Fila_LaPersona(object instance, object Value)
+        {
+            var that = (global::ListViewApp.View.Fila)instance;
+            that.LaPersona = (global::ListViewApp.Model.Persona)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::ListViewApp.ListViewApp_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::ListViewApp.ListViewApp_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "ListViewApp.View.Fila.LaPersona":
+                userType = (global::ListViewApp.ListViewApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ListViewApp.View.Fila");
+                xamlMember = new global::ListViewApp.ListViewApp_XamlTypeInfo.XamlMember(this, "LaPersona", "ListViewApp.Model.Persona");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_0_Fila_LaPersona;
+                xamlMember.Setter = set_0_Fila_LaPersona;
+                break;
+            }
             return xamlMember;
         }
     }

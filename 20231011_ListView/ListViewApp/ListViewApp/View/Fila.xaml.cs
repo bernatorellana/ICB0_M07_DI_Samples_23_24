@@ -25,20 +25,37 @@ namespace ListViewApp.View
             this.InitializeComponent();
         }
 
-
-
-
         public Persona LaPersona
         {
             get { return (Persona)GetValue(LaPersonaProperty); }
-            set { SetValue(LaPersonaProperty, value); }
+            set { SetValue(LaPersonaProperty, value);
+                this.DataContext = value;
+
+            }
         }
 
         // Using a DependencyProperty as the backing store for LaPersona.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty LaPersonaProperty =
-            DependencyProperty.Register("LaPersona", typeof(Persona), typeof(Fila), new PropertyMetadata(null));
+            DependencyProperty.Register("LaPersona", typeof(Persona), typeof(Fila), new PropertyMetadata(null,LaPersonaChanged));
 
+        private static void LaPersonaChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            Fila f = (Fila)d;
+            f.LaPersonaChanged();
+        }
 
-
+        private void LaPersonaChanged()
+        {
+            Persona cap = LaPersona.Cap;
+            if (cap != null)
+            {
+                Fila f = new Fila();
+                f.LaPersona = cap;
+                Grid.SetRow(f, 1);
+                Grid.SetColumn(f, 2);
+                Grid.SetColumnSpan(f, 3);
+                grdGrid.Children.Add(f);
+            }
+        }
     }
 }

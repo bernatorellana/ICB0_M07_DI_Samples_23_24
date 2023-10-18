@@ -36,7 +36,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <!--* Inici de fila * -->
-                    <view:Fila></view:Fila>
+                    <view:Fila LaPersona="{Binding}"></view:Fila>
                     <!--<Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="50"></ColumnDefinition>
