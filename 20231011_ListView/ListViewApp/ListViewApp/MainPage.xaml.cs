@@ -31,7 +31,24 @@ namespace ListViewApp
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             lsvPersones.ItemsSource = Persona.getPersones();
-           
+        }
+
+        private void lsvPersones_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            filSeleccionada.LaPersona = lsvPersones.SelectedItem as Persona;
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            //Persona.getPersones().Remove(lsvPersones.SelectedItem as Persona);
+            Persona.getPersones().RemoveAt(lsvPersones.SelectedIndex);
+
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Persona p0 = new Persona(666, "Jhon Devil", 99);
+            Persona.getPersones().Add(p0);
         }
     }
 }

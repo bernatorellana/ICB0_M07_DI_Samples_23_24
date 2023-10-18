@@ -17,7 +17,8 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <ListView  x:Name="lsvPersones">
+        <ListView  x:Name="lsvPersones"
+                   SelectionChanged="lsvPersones_SelectionChanged">
 
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
@@ -37,33 +38,17 @@
                 <DataTemplate>
                     <!--* Inici de fila * -->
                     <view:Fila LaPersona="{Binding}"></view:Fila>
-                    <!--<Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="50"></ColumnDefinition>
-                            <ColumnDefinition Width="*"></ColumnDefinition>
-                            <ColumnDefinition Width="3*"></ColumnDefinition>
-                            <ColumnDefinition Width="*"></ColumnDefinition>
-                            <ColumnDefinition Width="*"></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
-                        <Image  Source="{Binding UrlPhoto, FallbackValue='ms-appx:///Assets/f1.png'}"  VerticalAlignment="Center" Grid.Column="0"></Image>
-                        <TextBlock Text="{Binding Id, FallbackValue=1}" VerticalAlignment="Center"  Grid.Column="1" Padding="40"></TextBlock>
-                        <TextBlock Text="{Binding Name, FallbackValue=Pepita}" VerticalAlignment="Center" Grid.Column="2" Padding="20"></TextBlock>
-                        <TextBlock Text="{Binding Age, FallbackValue=23}" VerticalAlignment="Center"  Grid.Column="3" Padding="40"></TextBlock>
-                        <ListView Grid.Column="4" ItemsSource="{Binding Telefons}" >
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <Border BorderBrush="Gray" BorderThickness="1">
-                                        <TextBlock Text="{Binding}"></TextBlock>
-                                    </Border>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-                    </Grid>-->
                     <!--* Final de fila * -->
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
+
+        <StackPanel Orientation="Vertical" Grid.Column="1" >
+            <view:Fila x:Name="filSeleccionada"></view:Fila>
+            <Button x:Name="btnDelete" Click="btnDelete_Click"> DELETE</Button>
+            <Button x:Name="btnAdd" Click="btnAdd_Click">ADD</Button>
+        </StackPanel>
+
     </Grid>
     
 </Page>

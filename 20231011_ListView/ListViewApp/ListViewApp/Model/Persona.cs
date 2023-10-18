@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,13 +10,13 @@ namespace ListViewApp.Model
     public class Persona
     {
 
-        private static List<Persona> _personaList ;
+        private static OC<Persona> _personaList ;
 
-        public static List<Persona> getPersones()
+        public static OC<Persona> getPersones()
         {
             if(_personaList==null)
             {
-                _personaList = new List<Persona>();
+                _personaList = new OC<Persona>();
                 Persona p0 = new Persona(1, "Joan Busquets", 32);
                 Persona p1 = new Persona(2, "Maria Gutiérrez", 36);
                 Persona p2 = new Persona(3, "Pepe Saez", 34, p1);

@@ -30,13 +30,13 @@
     <AppXManifest Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231011_ListView\ListViewApp\ListViewApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-10-18T16:22:21.665</Modified>
+      <Modified>2023-10-18T18:12:16.008</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231011_ListView\ListViewApp\ListViewApp\bin\x86\Debug\ListViewApp.exe">
       <PackagePath>entrypoint\ListViewApp.exe</PackagePath>
-      <Modified>2023-10-18T16:22:21.371</Modified>
+      <Modified>2023-10-18T18:12:15.713</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -106,19 +106,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231011_ListView\ListViewApp\ListViewApp\bin\x86\Debug\ListViewApp.xr.xml">
       <PackagePath>ListViewApp.xr.xml</PackagePath>
-      <Modified>2023-10-18T16:21:54.271</Modified>
+      <Modified>2023-10-18T18:05:47.789</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231011_ListView\ListViewApp\ListViewApp\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-10-18T16:22:21.334</Modified>
+      <Modified>2023-10-18T18:12:15.667</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231011_ListView\ListViewApp\ListViewApp\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-10-18T16:22:21.335</Modified>
+      <Modified>2023-10-18T18:12:15.668</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231011_ListView\ListViewApp\ListViewApp\bin\x86\Debug\View\Fila.xbf">
       <PackagePath>View\Fila.xbf</PackagePath>
-      <Modified>2023-10-18T16:22:21.336</Modified>
+      <Modified>2023-10-18T18:12:15.669</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -126,11 +126,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231011_ListView\ListViewApp\ListViewApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-10-18T16:17:56.324</Modified>
+      <Modified>2023-10-18T18:10:49.613</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231011_ListView\ListViewApp\ListViewApp\bin\x86\Debug\Core\ListViewApp.exe">
       <PackagePath>ListViewApp.exe</PackagePath>
-      <Modified>2023-10-18T16:22:21.662</Modified>
+      <Modified>2023-10-18T18:12:16.005</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
