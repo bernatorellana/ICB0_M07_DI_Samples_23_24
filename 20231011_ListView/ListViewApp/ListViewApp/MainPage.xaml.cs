@@ -50,5 +50,10 @@ namespace ListViewApp
             Persona p0 = new Persona(666, "Jhon Devil", 99);
             Persona.getPersones().Add(p0);
         }
+
+        private void btnModify_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
