@@ -47,6 +47,7 @@
             <view:Fila x:ConnectionId='3' x:Name="filSeleccionada"></view:Fila>
             <Button x:ConnectionId='4' x:Name="btnDelete"                        > DELETE</Button>
             <Button x:ConnectionId='5' x:Name="btnAdd"                     >ADD</Button>
+            <Button x:ConnectionId='6' x:Name="btnModify"                        >MODIFY</Button>
         </StackPanel>
 
     </Grid>

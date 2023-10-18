@@ -46,3 +46,6 @@ E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231011_Lis
 E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231011_ListView\ListViewApp\ListViewApp\obj\x86\Debug\View\Fila.g.cs
 E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231011_ListView\ListViewApp\ListViewApp\obj\x86\Debug\View\Fila.xaml
 E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231011_ListView\ListViewApp\ListViewApp\obj\x86\Debug\View\Fila.xbf
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231011_ListView\ListViewApp\ListViewApp\obj\x86\Debug\ListViewApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231011_ListView\ListViewApp\ListViewApp\obj\x86\Debug\ListViewApp.csproj.Fody.CopyLocal.cache
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231011_ListView\ListViewApp\ListViewApp\obj\x86\Debug\ListViewApp.csproj.Fody.RuntimeCopyLocal.cache

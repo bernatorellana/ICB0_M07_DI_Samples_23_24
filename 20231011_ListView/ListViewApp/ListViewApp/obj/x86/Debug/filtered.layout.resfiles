@@ -16,4 +16,5 @@ App.xbf
 ListViewApp.xr.xml
 MainPage.xbf
 View\Fila.xbf
+FodyWeavers.xml
 Properties\Default.rd.xml

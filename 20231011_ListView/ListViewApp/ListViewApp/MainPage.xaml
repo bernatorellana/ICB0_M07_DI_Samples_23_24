@@ -47,6 +47,7 @@
             <view:Fila x:Name="filSeleccionada"></view:Fila>
             <Button x:Name="btnDelete" Click="btnDelete_Click"> DELETE</Button>
             <Button x:Name="btnAdd" Click="btnAdd_Click">ADD</Button>
+            <Button x:Name="btnModify" Click="btnModify_Click">MODIFY</Button>
         </StackPanel>
 
     </Grid>

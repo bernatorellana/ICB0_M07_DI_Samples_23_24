@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ListViewApp.Model
 {
-    public class Persona
+    public class Persona : INotifyPropertyChanged
     {
 
         private static OC<Persona> _personaList ;
@@ -44,19 +45,16 @@ namespace ListViewApp.Model
 
 
 
+        #region Propietats 
 
-
-
-
-
-
-
-        //**********************************************
         private long id;
         private string name;
         private int age;
-        private List<String> telefons;
+        private OC<String> telefons;
         private Persona cap;
+        #endregion
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public Persona(long id, string name, int age, Persona cap=null)
         {
@@ -64,15 +62,27 @@ namespace ListViewApp.Model
             Name = name;
             Age = age;
             this.cap = cap;
-            telefons = new List<string>();
+            telefons = new OC<string>();
          }
 
         public Persona Cap { get => cap; set => cap = value; }
 
-        public List<String> Telefons { get => telefons; }
+        public OC<String> Telefons { get => telefons; }
 
         public long Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
+
+        /*
+         // Versió de notificació manual dels canvis a les propietats
+         // Ho automatitzarem usant el Nugget "Fody.INotifyPropertyChanged"
+
+             public string Name { get => name; set
+            {
+                name = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Name"));
+            }
+        }
+         */
         public int Age { get => age; set => age = value; }
 
         public String UrlPhoto { get

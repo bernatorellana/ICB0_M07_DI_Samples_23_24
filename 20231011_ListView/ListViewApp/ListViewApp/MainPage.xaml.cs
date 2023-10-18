@@ -1,6 +1,7 @@
 ﻿using ListViewApp.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -53,7 +54,25 @@ namespace ListViewApp
 
         private void btnModify_Click(object sender, RoutedEventArgs e)
         {
+            // De la persona seleccionada volem:
+            //Persona pJoderQueFaena= Persona.getPersones()[lsvPersones.SelectedIndex];
+            Persona p = lsvPersones.SelectedItem as Persona;
+            // 1) canviar el nom a MAJUSCULES/minúscules alternativament
+            if(p.Name.ToUpper()== p.Name)
+            {
+                p.Name = p.Name.ToLower();
+            } else { 
+                p.Name = p.Name.ToUpper(); 
+            }
+            // 2) augmentar l'edat +1
+            p.Age++;
+            // 3) afegir un número de telèfon
+            p.Telefons.Add("RANDOM");
+            // Enjoy !
+            
 
+           //**********************************************************
+           // 
         }
     }
 }
