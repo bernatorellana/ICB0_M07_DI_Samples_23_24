@@ -1,0 +1,51 @@
+﻿<UserControl
+    x:Class="NBA.View.MiTeam"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NBA.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Height="600"
+    d:DesignHeight="600"
+    d:DesignWidth="400"
+    x:Name="uscRootTeam">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="{Binding ElementName=uscRootTeam,Path=TheTeam.UrlLogo}" VerticalAlignment="Center" Grid.Column="0"></Image>
+        <Grid Grid.Column="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="{Binding ElementName=uscRootTeam,Path=TheTeam.Nom}" FontSize="20" Grid.Row="0"/>
+            <TextBlock Text="{Binding ElementName=uscRootTeam,Path=TheTeam.Desc}" TextWrapping="Wrap" Grid.Row="1"/>
+            <!--<DatePicker x:Name="dtpCreationDate" HorizontalAlignment="Center" Date="{Binding ElementName=uscRootTeam,Path=TheTeam.DataCreacio}" Grid.Row="2"></DatePicker>-->
+            <DatePicker x:Name="dtpCreationDate" HorizontalAlignment="Center"  Grid.Row="2"></DatePicker>
+        </Grid>
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding ElementName=uscRootTeam,Path=TheTeam.Coach.UrlFoto}" Grid.Row="0" Width="500" Height="200" HorizontalAlignment="Center"></Image>
+            <ListView x:Name="lsvJugadors" ItemsSource="{Binding ElementName=uscRootTeam,Path=TheTeam.Jugadors}" Grid.Row="1" MaxHeight="400">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <local:MiPlayers ThePlayer="{Binding}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+        </Grid>
+    </Grid>
+</UserControl>
