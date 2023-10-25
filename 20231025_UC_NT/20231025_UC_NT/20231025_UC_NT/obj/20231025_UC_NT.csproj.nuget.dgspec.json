@@ -1,0 +1,79 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\ICB0_M07_DI_Samples_23_24\\20231025_UC_NT\\20231025_UC_NT\\20231025_UC_NT\\20231025_UC_NT.csproj": {}
+  },
+  "projects": {
+    "E:\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\ICB0_M07_DI_Samples_23_24\\20231025_UC_NT\\20231025_UC_NT\\20231025_UC_NT\\20231025_UC_NT.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\ICB0_M07_DI_Samples_23_24\\20231025_UC_NT\\20231025_UC_NT\\20231025_UC_NT\\20231025_UC_NT.csproj",
+        "projectName": "20231025_UC_NT",
+        "projectPath": "E:\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\ICB0_M07_DI_Samples_23_24\\20231025_UC_NT\\20231025_UC_NT\\20231025_UC_NT\\20231025_UC_NT.csproj",
+        "packagesPath": "C:\\Users\\Usuari\\.nuget\\packages\\",
+        "outputPath": "E:\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\ICB0_M07_DI_Samples_23_24\\20231025_UC_NT\\20231025_UC_NT\\20231025_UC_NT\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Usuari\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "uap10.0.16299"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "uap10.0.16299": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "uap10.0.16299": {
+          "dependencies": {
+            "Microsoft.NETCore.UniversalWindowsPlatform": {
+              "target": "Package",
+              "version": "[6.2.14, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      },
+      "runtimes": {
+        "win10-arm": {
+          "#import": []
+        },
+        "win10-arm-aot": {
+          "#import": []
+        },
+        "win10-arm64-aot": {
+          "#import": []
+        },
+        "win10-x64": {
+          "#import": []
+        },
+        "win10-x64-aot": {
+          "#import": []
+        },
+        "win10-x86": {
+          "#import": []
+        },
+        "win10-x86-aot": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
