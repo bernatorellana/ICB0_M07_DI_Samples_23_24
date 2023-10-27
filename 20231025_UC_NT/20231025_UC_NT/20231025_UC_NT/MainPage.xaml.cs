@@ -26,5 +26,10 @@ namespace _20231025_UC_NT
         {
             this.InitializeComponent();
         }
+
+        private void UINumericTextbox_ValueChanged(object sender, EventArgs e)
+        {
+            //txbValor.Text = uintbx.Value + "";
+        }
     }
 }

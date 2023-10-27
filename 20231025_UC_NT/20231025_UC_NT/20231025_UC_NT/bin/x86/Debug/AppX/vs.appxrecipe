@@ -30,13 +30,13 @@
     <AppXManifest Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231025_UC_NT\20231025_UC_NT\20231025_UC_NT\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-10-25T19:25:48.947</Modified>
+      <Modified>2023-10-27T17:45:46.904</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231025_UC_NT\20231025_UC_NT\20231025_UC_NT\bin\x86\Debug\20231025_UC_NT.exe">
       <PackagePath>entrypoint\20231025_UC_NT.exe</PackagePath>
-      <Modified>2023-10-25T19:25:48.642</Modified>
+      <Modified>2023-10-27T17:45:46.620</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -82,19 +82,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231025_UC_NT\20231025_UC_NT\20231025_UC_NT\bin\x86\Debug\20231025_UC_NT.xr.xml">
       <PackagePath>20231025_UC_NT.xr.xml</PackagePath>
-      <Modified>2023-10-25T19:23:42.909</Modified>
+      <Modified>2023-10-27T17:45:46.575</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231025_UC_NT\20231025_UC_NT\20231025_UC_NT\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-10-25T19:25:48.601</Modified>
+      <Modified>2023-10-27T17:45:46.579</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231025_UC_NT\20231025_UC_NT\20231025_UC_NT\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-10-25T19:25:48.602</Modified>
+      <Modified>2023-10-27T17:45:46.580</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231025_UC_NT\20231025_UC_NT\20231025_UC_NT\bin\x86\Debug\View\UINumericTextbox.xbf">
       <PackagePath>View\UINumericTextbox.xbf</PackagePath>
-      <Modified>2023-10-25T19:25:48.603</Modified>
+      <Modified>2023-10-27T17:45:46.581</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -106,7 +106,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231025_UC_NT\20231025_UC_NT\20231025_UC_NT\bin\x86\Debug\Core\20231025_UC_NT.exe">
       <PackagePath>20231025_UC_NT.exe</PackagePath>
-      <Modified>2023-10-25T19:25:48.944</Modified>
+      <Modified>2023-10-27T17:45:46.901</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

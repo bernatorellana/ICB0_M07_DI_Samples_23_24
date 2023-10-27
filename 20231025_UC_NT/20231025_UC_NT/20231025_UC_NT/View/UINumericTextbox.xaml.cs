@@ -24,6 +24,11 @@ namespace _20231025_UC_NT.View
         {
             this.InitializeComponent();
         }
+
+
+        /// <summary>
+        /// Aquest event es dispara per qualsevol canvi de valor del control.
+        /// </summary>
         public event EventHandler<EventArgs> ValueChanged;
 
         #region Prop-dps
@@ -85,7 +90,10 @@ namespace _20231025_UC_NT.View
             {
                 Value = 0;
             }
-            
+            //if(ValueChanged!=null) ValueChanged.Invoke(this, EventArgs.Empty);
+            ValueChanged?.Invoke(this, new EventArgs());
+
+
         }
 
         private void txtValue_KeyDown(object sender, KeyRoutedEventArgs e)

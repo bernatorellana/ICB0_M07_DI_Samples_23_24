@@ -8,7 +8,9 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <view:UINumericTextbox Value="6"></view:UINumericTextbox>
-    </Grid>
+    <StackPanel>
+        <view:UINumericTextbox Min="10" Max="100" x:Name="uintbx" Value="6" ValueChanged="UINumericTextbox_ValueChanged" ></view:UINumericTextbox>
+        <TextBlock TextAlignment="Center" x:Name="txbValor"
+                 Text="{Binding ElementName=uintbx,Path=Value}" ></TextBlock>
+    </StackPanel>
 </Page>
