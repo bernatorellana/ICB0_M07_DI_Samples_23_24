@@ -91,9 +91,8 @@ namespace _20231025_UC_NT.View
                 Value = 0;
             }
             //if(ValueChanged!=null) ValueChanged.Invoke(this, EventArgs.Empty);
+            // Notifiquem un canvi de valor 
             ValueChanged?.Invoke(this, new EventArgs());
-
-
         }
 
         private void txtValue_KeyDown(object sender, KeyRoutedEventArgs e)
