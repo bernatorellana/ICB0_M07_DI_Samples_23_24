@@ -189,25 +189,27 @@ namespace MaskedTextBox.MaskedTextBox_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[8];
+            _typeNameTable = new string[9];
             _typeNameTable[0] = "MaskedTextBox.ContentDialog1";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.ContentDialog";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.ContentControl";
             _typeNameTable[3] = "String";
             _typeNameTable[4] = "MaskedTextBox.Dialeg";
             _typeNameTable[5] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[6] = "MaskedTextBox.MainPage";
-            _typeNameTable[7] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[6] = "MaskedTextBox.View.UIMaskedTextbox";
+            _typeNameTable[7] = "MaskedTextBox.MainPage";
+            _typeNameTable[8] = "Windows.UI.Xaml.Controls.Page";
 
-            _typeTable = new global::System.Type[8];
+            _typeTable = new global::System.Type[9];
             _typeTable[0] = typeof(global::MaskedTextBox.ContentDialog1);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.ContentDialog);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
             _typeTable[3] = typeof(global::System.String);
             _typeTable[4] = typeof(global::MaskedTextBox.Dialeg);
             _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[6] = typeof(global::MaskedTextBox.MainPage);
-            _typeTable[7] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[6] = typeof(global::MaskedTextBox.View.UIMaskedTextbox);
+            _typeTable[7] = typeof(global::MaskedTextBox.MainPage);
+            _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.Page);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -244,7 +246,8 @@ namespace MaskedTextBox.MaskedTextBox_XamlTypeInfo
 
         private object Activate_0_ContentDialog1() { return new global::MaskedTextBox.ContentDialog1(); }
         private object Activate_4_Dialeg() { return new global::MaskedTextBox.Dialeg(); }
-        private object Activate_6_MainPage() { return new global::MaskedTextBox.MainPage(); }
+        private object Activate_6_UIMaskedTextbox() { return new global::MaskedTextBox.View.UIMaskedTextbox(); }
+        private object Activate_7_MainPage() { return new global::MaskedTextBox.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -287,14 +290,22 @@ namespace MaskedTextBox.MaskedTextBox_XamlTypeInfo
                 xamlType = new global::MaskedTextBox.MaskedTextBox_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  MaskedTextBox.MainPage
-                userType = new global::MaskedTextBox.MaskedTextBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_MainPage;
+            case 6:   //  MaskedTextBox.View.UIMaskedTextbox
+                userType = new global::MaskedTextBox.MaskedTextBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_6_UIMaskedTextbox;
+                userType.AddMemberName("Mask");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  Windows.UI.Xaml.Controls.Page
+            case 7:   //  MaskedTextBox.MainPage
+                userType = new global::MaskedTextBox.MaskedTextBox_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::MaskedTextBox.MaskedTextBox_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -312,6 +323,16 @@ namespace MaskedTextBox.MaskedTextBox_XamlTypeInfo
             var that = (global::MaskedTextBox.ContentDialog1)instance;
             that.Valor = (global::System.String)Value;
         }
+        private object get_1_UIMaskedTextbox_Mask(object instance)
+        {
+            var that = (global::MaskedTextBox.View.UIMaskedTextbox)instance;
+            return that.Mask;
+        }
+        private void set_1_UIMaskedTextbox_Mask(object instance, object Value)
+        {
+            var that = (global::MaskedTextBox.View.UIMaskedTextbox)instance;
+            that.Mask = (global::System.String)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -326,6 +347,13 @@ namespace MaskedTextBox.MaskedTextBox_XamlTypeInfo
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_0_ContentDialog1_Valor;
                 xamlMember.Setter = set_0_ContentDialog1_Valor;
+                break;
+            case "MaskedTextBox.View.UIMaskedTextbox.Mask":
+                userType = (global::MaskedTextBox.MaskedTextBox_XamlTypeInfo.XamlUserType)GetXamlTypeByName("MaskedTextBox.View.UIMaskedTextbox");
+                xamlMember = new global::MaskedTextBox.MaskedTextBox_XamlTypeInfo.XamlMember(this, "Mask", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_1_UIMaskedTextbox_Mask;
+                xamlMember.Setter = set_1_UIMaskedTextbox_Mask;
                 break;
             }
             return xamlMember;

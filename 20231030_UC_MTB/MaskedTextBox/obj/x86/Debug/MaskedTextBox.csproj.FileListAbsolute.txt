@@ -51,3 +51,8 @@ E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_
 E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\obj\x86\Debug\Dialeg.xaml
 E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\obj\x86\Debug\ContentDialog1.xbf
 E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\obj\x86\Debug\Dialeg.xbf
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\bin\x86\Debug\View\UIMaskedTextbox.xbf
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\obj\x86\Debug\View\UIMaskedTextbox.g.i.cs
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\obj\x86\Debug\View\UIMaskedTextbox.g.cs
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\obj\x86\Debug\View\UIMaskedTextbox.xaml
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\obj\x86\Debug\View\UIMaskedTextbox.xbf

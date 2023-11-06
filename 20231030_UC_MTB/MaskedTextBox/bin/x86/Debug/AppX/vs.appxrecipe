@@ -30,13 +30,13 @@
     <AppXManifest Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-03T19:21:06.207</Modified>
+      <Modified>2023-11-06T18:29:39.550</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\bin\x86\Debug\MaskedTextBox.exe">
       <PackagePath>entrypoint\MaskedTextBox.exe</PackagePath>
-      <Modified>2023-11-03T19:21:05.104</Modified>
+      <Modified>2023-11-06T18:29:38.304</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -82,23 +82,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\bin\x86\Debug\MaskedTextBox.xr.xml">
       <PackagePath>MaskedTextBox.xr.xml</PackagePath>
-      <Modified>2023-11-03T19:21:04.836</Modified>
+      <Modified>2023-11-06T18:29:37.981</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-11-03T19:21:04.909</Modified>
+      <Modified>2023-11-06T18:29:38.053</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\bin\x86\Debug\ContentDialog1.xbf">
       <PackagePath>ContentDialog1.xbf</PackagePath>
-      <Modified>2023-11-03T19:21:04.946</Modified>
+      <Modified>2023-11-06T18:29:38.097</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\bin\x86\Debug\Dialeg.xbf">
       <PackagePath>Dialeg.xbf</PackagePath>
-      <Modified>2023-11-03T19:21:04.969</Modified>
+      <Modified>2023-11-06T18:29:38.131</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-11-03T19:21:04.989</Modified>
+      <Modified>2023-11-06T18:29:38.158</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\bin\x86\Debug\View\UIMaskedTextbox.xbf">
+      <PackagePath>View\UIMaskedTextbox.xbf</PackagePath>
+      <Modified>2023-11-06T18:29:38.191</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -106,11 +110,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-10-30T18:18:59.564</Modified>
+      <Modified>2023-11-06T18:29:39.023</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231030_UC_MTB\MaskedTextBox\bin\x86\Debug\Core\MaskedTextBox.exe">
       <PackagePath>MaskedTextBox.exe</PackagePath>
-      <Modified>2023-11-03T19:21:06.135</Modified>
+      <Modified>2023-11-06T18:29:39.480</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

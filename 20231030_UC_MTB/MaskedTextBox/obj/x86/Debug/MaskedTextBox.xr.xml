@@ -18,7 +18,6 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Text" />
-      <RootEvent Name="TextChanged" />
       <RootEvent Name="PreviewKeyDown" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
@@ -38,6 +37,9 @@
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="MaskedTextBox.View.UIMaskedTextbox">
+      <RootProperty Name="Mask" />
     </RootType>
     <RootType FullName="MaskedTextBox.MainPage" />
   </Roots.RootTypes>
