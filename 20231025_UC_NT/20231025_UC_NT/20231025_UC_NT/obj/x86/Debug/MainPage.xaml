@@ -9,9 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
-        <view:UINumericTextbox x:ConnectionId='2' x:Name="uintbx" Value="6"                                              ></view:UINumericTextbox>
+        <view:UINumericTextbox x:ConnectionId='2' Min="10" Max="100" Value="40000" x:Name="uintbx" 
+                                                                            ></view:UINumericTextbox>
         <TextBlock x:ConnectionId='3' TextAlignment="Center" x:Name="txbValor"
-                 Text="{Binding ElementName=uintbx,Path=Value}"  ></TextBlock>
+                 Text="{Binding ElementName=uintbx,Path=Value}" ></TextBlock>
     </StackPanel>
 </Page>
 

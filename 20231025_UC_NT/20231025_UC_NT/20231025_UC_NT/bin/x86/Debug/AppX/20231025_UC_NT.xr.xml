@@ -14,6 +14,8 @@
       <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="_20231025_UC_NT.View.UINumericTextbox">
+      <RootProperty Name="Min" />
+      <RootProperty Name="Max" />
       <RootProperty Name="Value" />
       <RootEvent Name="ValueChanged" />
     </RootType>

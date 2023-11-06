@@ -252,9 +252,9 @@ namespace _20231025_UC_NT._0231025_UC_NT_XamlTypeInfo
             case 0:   //  _20231025_UC_NT.View.UINumericTextbox
                 userType = new global::_20231025_UC_NT._0231025_UC_NT_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.Activator = Activate_0_UINumericTextbox;
-                userType.AddMemberName("Value");
-                userType.AddMemberName("Max");
                 userType.AddMemberName("Min");
+                userType.AddMemberName("Max");
+                userType.AddMemberName("Value");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -282,15 +282,15 @@ namespace _20231025_UC_NT._0231025_UC_NT_XamlTypeInfo
         }
 
 
-        private object get_0_UINumericTextbox_Value(object instance)
+        private object get_0_UINumericTextbox_Min(object instance)
         {
             var that = (global::_20231025_UC_NT.View.UINumericTextbox)instance;
-            return that.Value;
+            return that.Min;
         }
-        private void set_0_UINumericTextbox_Value(object instance, object Value)
+        private void set_0_UINumericTextbox_Min(object instance, object Value)
         {
             var that = (global::_20231025_UC_NT.View.UINumericTextbox)instance;
-            that.Value = (global::System.Int32)Value;
+            that.Min = (global::System.Int32)Value;
         }
         private object get_1_UINumericTextbox_Max(object instance)
         {
@@ -302,15 +302,15 @@ namespace _20231025_UC_NT._0231025_UC_NT_XamlTypeInfo
             var that = (global::_20231025_UC_NT.View.UINumericTextbox)instance;
             that.Max = (global::System.Int32)Value;
         }
-        private object get_2_UINumericTextbox_Min(object instance)
+        private object get_2_UINumericTextbox_Value(object instance)
         {
             var that = (global::_20231025_UC_NT.View.UINumericTextbox)instance;
-            return that.Min;
+            return that.Value;
         }
-        private void set_2_UINumericTextbox_Min(object instance, object Value)
+        private void set_2_UINumericTextbox_Value(object instance, object Value)
         {
             var that = (global::_20231025_UC_NT.View.UINumericTextbox)instance;
-            that.Min = (global::System.Int32)Value;
+            that.Value = (global::System.Int32)Value;
         }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
@@ -320,12 +320,12 @@ namespace _20231025_UC_NT._0231025_UC_NT_XamlTypeInfo
 
             switch (longMemberName)
             {
-            case "_20231025_UC_NT.View.UINumericTextbox.Value":
+            case "_20231025_UC_NT.View.UINumericTextbox.Min":
                 userType = (global::_20231025_UC_NT._0231025_UC_NT_XamlTypeInfo.XamlUserType)GetXamlTypeByName("_20231025_UC_NT.View.UINumericTextbox");
-                xamlMember = new global::_20231025_UC_NT._0231025_UC_NT_XamlTypeInfo.XamlMember(this, "Value", "Int32");
+                xamlMember = new global::_20231025_UC_NT._0231025_UC_NT_XamlTypeInfo.XamlMember(this, "Min", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_0_UINumericTextbox_Value;
-                xamlMember.Setter = set_0_UINumericTextbox_Value;
+                xamlMember.Getter = get_0_UINumericTextbox_Min;
+                xamlMember.Setter = set_0_UINumericTextbox_Min;
                 break;
             case "_20231025_UC_NT.View.UINumericTextbox.Max":
                 userType = (global::_20231025_UC_NT._0231025_UC_NT_XamlTypeInfo.XamlUserType)GetXamlTypeByName("_20231025_UC_NT.View.UINumericTextbox");
@@ -334,12 +334,12 @@ namespace _20231025_UC_NT._0231025_UC_NT_XamlTypeInfo
                 xamlMember.Getter = get_1_UINumericTextbox_Max;
                 xamlMember.Setter = set_1_UINumericTextbox_Max;
                 break;
-            case "_20231025_UC_NT.View.UINumericTextbox.Min":
+            case "_20231025_UC_NT.View.UINumericTextbox.Value":
                 userType = (global::_20231025_UC_NT._0231025_UC_NT_XamlTypeInfo.XamlUserType)GetXamlTypeByName("_20231025_UC_NT.View.UINumericTextbox");
-                xamlMember = new global::_20231025_UC_NT._0231025_UC_NT_XamlTypeInfo.XamlMember(this, "Min", "Int32");
+                xamlMember = new global::_20231025_UC_NT._0231025_UC_NT_XamlTypeInfo.XamlMember(this, "Value", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_2_UINumericTextbox_Min;
-                xamlMember.Setter = set_2_UINumericTextbox_Min;
+                xamlMember.Getter = get_2_UINumericTextbox_Value;
+                xamlMember.Setter = set_2_UINumericTextbox_Value;
                 break;
             }
             return xamlMember;

@@ -42,8 +42,23 @@ namespace _20231025_UC_NT.View
 
         // Using a DependencyProperty as the backing store for Value.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ValueProperty =
-            DependencyProperty.Register("Value", typeof(int), typeof(UINumericTextbox), new PropertyMetadata(0));
+            DependencyProperty.Register("Value", typeof(int), typeof(UINumericTextbox), new PropertyMetadata(0, OnValueChangedStatic));
 
+        private static void OnValueChangedStatic(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            UINumericTextbox instance = (UINumericTextbox)d;
+            instance.OnValueChanged(e);
+        }
+
+        private void OnValueChanged(DependencyPropertyChangedEventArgs e)
+        {
+            Value = verifyValue((int)e.NewValue);
+        }
+
+        private int verifyValue(int newValue)
+        {
+            return Math.Clamp(newValue, Min, Max);
+        }
 
         public int Max
         {

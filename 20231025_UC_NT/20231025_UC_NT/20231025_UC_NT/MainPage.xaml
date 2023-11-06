@@ -9,7 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
-        <view:UINumericTextbox Min="10" Max="100" Value="98" x:Name="uintbx" Value="6" ValueChanged="UINumericTextbox_ValueChanged" ></view:UINumericTextbox>
+        <view:UINumericTextbox Min="10" Max="100" Value="40000" x:Name="uintbx" 
+                               ValueChanged="UINumericTextbox_ValueChanged" ></view:UINumericTextbox>
         <TextBlock TextAlignment="Center" x:Name="txbValor"
                  Text="{Binding ElementName=uintbx,Path=Value}" ></TextBlock>
     </StackPanel>
