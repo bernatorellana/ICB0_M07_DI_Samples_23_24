@@ -9,7 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="LightSlateGray">
-        <view:UIVolume Width="200" Height="100" Max="10" Valor="6" Min="0" Step="1"></view:UIVolume>
+        <TextBlock Text="{Binding ElementName=uiVol, Path=Valor}"></TextBlock>
+        <view:UIVolume x:ConnectionId='2' x:Name="uiVol"                                          Width="200" Height="100" Max="10" Valor="2" Min="0" Step="1"></view:UIVolume>
         
         <!--<Canvas Background="#4c687e">
             <Image Source="Assets/button.png" Width="100" Height="100">

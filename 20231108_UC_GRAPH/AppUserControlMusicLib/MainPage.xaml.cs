@@ -26,5 +26,10 @@ namespace AppUserControlMusicLib
         {
             this.InitializeComponent();
         }
+
+        private void UIVolume_OnValorChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

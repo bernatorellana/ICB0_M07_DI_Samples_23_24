@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Valor" />
+  </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
@@ -11,6 +14,9 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Children" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Text" />
+    </RootType>
     <RootType FullName="AppUserControlMusicLib.View.UIVolume">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
@@ -18,6 +24,11 @@
       <RootProperty Name="Valor" />
       <RootProperty Name="Min" />
       <RootProperty Name="Step" />
+      <RootEvent Name="OnValorChanged" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="ElementName" />
+      <RootProperty Name="Path" />
     </RootType>
     <RootType FullName="AppUserControlMusicLib.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">

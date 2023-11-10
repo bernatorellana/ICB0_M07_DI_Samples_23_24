@@ -30,13 +30,13 @@
     <AppXManifest Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-10T19:04:15.164</Modified>
+      <Modified>2023-11-10T19:27:52.216</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\bin\x86\Debug\AppUserControlMusicLib.exe">
       <PackagePath>entrypoint\AppUserControlMusicLib.exe</PackagePath>
-      <Modified>2023-11-10T19:04:14.870</Modified>
+      <Modified>2023-11-10T19:27:51.913</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -86,19 +86,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\bin\x86\Debug\AppUserControlMusicLib.xr.xml">
       <PackagePath>AppUserControlMusicLib.xr.xml</PackagePath>
-      <Modified>2023-11-10T19:02:27.273</Modified>
+      <Modified>2023-11-10T19:27:51.868</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-11-10T19:04:14.823</Modified>
+      <Modified>2023-11-10T19:27:51.872</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-11-10T19:04:14.824</Modified>
+      <Modified>2023-11-10T19:27:51.873</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\bin\x86\Debug\View\UIVolume.xbf">
       <PackagePath>View\UIVolume.xbf</PackagePath>
-      <Modified>2023-11-10T19:04:14.825</Modified>
+      <Modified>2023-11-10T19:27:51.874</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -110,7 +110,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\bin\x86\Debug\Core\AppUserControlMusicLib.exe">
       <PackagePath>AppUserControlMusicLib.exe</PackagePath>
-      <Modified>2023-11-10T19:04:15.161</Modified>
+      <Modified>2023-11-10T19:27:52.212</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

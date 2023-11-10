@@ -26,6 +26,9 @@ namespace AppUserControlMusicLib.View
         double angleReserva;
         double angle;
 
+
+        public event EventHandler OnValorChanged; 
+
         public UIVolume()
         {
             this.InitializeComponent();
@@ -53,6 +56,7 @@ namespace AppUserControlMusicLib.View
         private void ValueChangedCallback(DependencyPropertyChangedEventArgs e)
         {
             UserControl_Loaded(null, null);
+            OnValorChanged?.Invoke(this, new EventArgs());
         }
 
         public int Min
@@ -158,6 +162,7 @@ namespace AppUserControlMusicLib.View
                 t.TextAlignment = TextAlignment.Center;
                 c.Children.Add(t);
                 cnv.Children.Add(c);
+                t.Tapped += T_Tapped;
 
                 CompositeTransform ct2 = new CompositeTransform();
                 ct2.CenterX = midaLletra * 0.5;
@@ -189,6 +194,11 @@ namespace AppUserControlMusicLib.View
              * 
              * 
              */
+        }
+
+        private void T_Tapped(object sender, TappedRoutedEventArgs e)
+        {   
+            Valor = Int32.Parse((sender as TextBlock).Text);
         }
     }
 }
