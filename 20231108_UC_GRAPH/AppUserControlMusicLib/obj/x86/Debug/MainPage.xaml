@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="LightSlateGray">
-        <view:UIVolume Width="200" Height="100"></view:UIVolume>
+        <view:UIVolume Width="200" Height="100" Max="10" Valor="6" Min="0" Step="1"></view:UIVolume>
         
         <!--<Canvas Background="#4c687e">
             <Image Source="Assets/button.png" Width="100" Height="100">

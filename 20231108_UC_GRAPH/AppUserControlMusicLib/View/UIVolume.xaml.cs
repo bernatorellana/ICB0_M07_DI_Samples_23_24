@@ -22,9 +22,14 @@ namespace AppUserControlMusicLib.View
 {
     public sealed partial class UIVolume : UserControl
     {
+
+        double angleReserva;
+        double angle;
+
         public UIVolume()
         {
             this.InitializeComponent();
+
         }
 
 
@@ -37,9 +42,18 @@ namespace AppUserControlMusicLib.View
 
         // Using a DependencyProperty as the backing store for Valor.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ValorProperty =
-            DependencyProperty.Register("Valor", typeof(int), typeof(UIVolume), new PropertyMetadata(0));
+            DependencyProperty.Register("Valor", typeof(int), typeof(UIVolume), new PropertyMetadata(0,ValueChangedCallbackStatic));
 
+        private static void ValueChangedCallbackStatic(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            UIVolume ui = d as UIVolume;
+            ui.ValueChangedCallback(e);
+        }
 
+        private void ValueChangedCallback(DependencyPropertyChangedEventArgs e)
+        {
+            UserControl_Loaded(null, null);
+        }
 
         public int Min
         {
@@ -79,6 +93,14 @@ namespace AppUserControlMusicLib.View
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
+            // Netejar TOTS els fills
+            cnv.Children.Clear();
+
+
+            // Inicialitzem l'angle base
+            angleReserva = 50;
+            angle = 90 - angleReserva * 0.5;
+
             Image image = new Image();
             image.Source = new BitmapImage(new Uri("ms-appx:///Assets/button.png"));
             
@@ -93,15 +115,23 @@ namespace AppUserControlMusicLib.View
             CompositeTransform ct3 = new CompositeTransform();
             ct3.CenterX = image.Width * 0.5;
             ct3.CenterY = image.Height * 0.5;
+            
+
+            // Quan canvia el valor, estaré aquí !!!!!! 
+            double angleDisponible = 360 - angleReserva;
+            double proporcio = (Valor - Min) / (double)(Max - Min);
+            double angleAGirar = proporcio * angleDisponible;
+            double angleTotal = angle - angleAGirar;
+            ct3.Rotation = angleTotal;
             image.RenderTransform = ct3;
+
             //===================================================
             double midaLletra = 30;
-            double angleReserva = 50;
-            double angleDisponible = 360 - angleReserva;
+
             int passos = (Max - Min) / Step;
             double pasAngular = angleDisponible / passos;
-            double angle =90 - angleReserva*0.5;
-            ct3.Rotation = angle;
+
+           
             for (int i=Min;i<=Max; i+=Step) { 
                 Canvas c = new Canvas();
                 c.Width = midaLletra;

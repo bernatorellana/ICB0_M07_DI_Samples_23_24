@@ -252,9 +252,9 @@ namespace AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo
             case 0:   //  AppUserControlMusicLib.View.UIVolume
                 userType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.Activator = Activate_0_UIVolume;
+                userType.AddMemberName("Max");
                 userType.AddMemberName("Valor");
                 userType.AddMemberName("Min");
-                userType.AddMemberName("Max");
                 userType.AddMemberName("Step");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -283,35 +283,35 @@ namespace AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo
         }
 
 
-        private object get_0_UIVolume_Valor(object instance)
-        {
-            var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
-            return that.Valor;
-        }
-        private void set_0_UIVolume_Valor(object instance, object Value)
-        {
-            var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
-            that.Valor = (global::System.Int32)Value;
-        }
-        private object get_1_UIVolume_Min(object instance)
-        {
-            var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
-            return that.Min;
-        }
-        private void set_1_UIVolume_Min(object instance, object Value)
-        {
-            var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
-            that.Min = (global::System.Int32)Value;
-        }
-        private object get_2_UIVolume_Max(object instance)
+        private object get_0_UIVolume_Max(object instance)
         {
             var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
             return that.Max;
         }
-        private void set_2_UIVolume_Max(object instance, object Value)
+        private void set_0_UIVolume_Max(object instance, object Value)
         {
             var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
             that.Max = (global::System.Int32)Value;
+        }
+        private object get_1_UIVolume_Valor(object instance)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
+            return that.Valor;
+        }
+        private void set_1_UIVolume_Valor(object instance, object Value)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
+            that.Valor = (global::System.Int32)Value;
+        }
+        private object get_2_UIVolume_Min(object instance)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
+            return that.Min;
+        }
+        private void set_2_UIVolume_Min(object instance, object Value)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
+            that.Min = (global::System.Int32)Value;
         }
         private object get_3_UIVolume_Step(object instance)
         {
@@ -331,26 +331,26 @@ namespace AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo
 
             switch (longMemberName)
             {
+            case "AppUserControlMusicLib.View.UIVolume.Max":
+                userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIVolume");
+                xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Max", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_0_UIVolume_Max;
+                xamlMember.Setter = set_0_UIVolume_Max;
+                break;
             case "AppUserControlMusicLib.View.UIVolume.Valor":
                 userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIVolume");
                 xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Valor", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_0_UIVolume_Valor;
-                xamlMember.Setter = set_0_UIVolume_Valor;
+                xamlMember.Getter = get_1_UIVolume_Valor;
+                xamlMember.Setter = set_1_UIVolume_Valor;
                 break;
             case "AppUserControlMusicLib.View.UIVolume.Min":
                 userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIVolume");
                 xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Min", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_1_UIVolume_Min;
-                xamlMember.Setter = set_1_UIVolume_Min;
-                break;
-            case "AppUserControlMusicLib.View.UIVolume.Max":
-                userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIVolume");
-                xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Max", "Int32");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_2_UIVolume_Max;
-                xamlMember.Setter = set_2_UIVolume_Max;
+                xamlMember.Getter = get_2_UIVolume_Min;
+                xamlMember.Setter = set_2_UIVolume_Min;
                 break;
             case "AppUserControlMusicLib.View.UIVolume.Step":
                 userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIVolume");
