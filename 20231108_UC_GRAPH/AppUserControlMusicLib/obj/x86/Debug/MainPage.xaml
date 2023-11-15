@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="AppUserControlMusicLib.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -6,11 +6,29 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:view="using:AppUserControlMusicLib.View"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                        >
 
     <Grid Background="LightSlateGray">
         <TextBlock Text="{Binding ElementName=uiVol, Path=Valor}"></TextBlock>
-        <view:UIVolume x:ConnectionId='2' x:Name="uiVol"                                          Width="200" Height="100" Max="10" Valor="2" Min="0" Step="1"></view:UIVolume>
+        <StackPanel>
+
+           
+            <ListView x:ConnectionId='2' x:Name="lsbValors"
+          ScrollViewer.HorizontalScrollMode="Enabled"
+          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+          ScrollViewer.IsHorizontalRailEnabled="True"
+                      >
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+            </ListView>
+
+            <view:UIBotonera x:ConnectionId='3' x:Name="botonera" Step="10" Max="100" Min="0" ></view:UIBotonera>
+        
+        </StackPanel>
         
         <!--<Canvas Background="#4c687e">
             <Image Source="Assets/button.png" Width="100" Height="100">

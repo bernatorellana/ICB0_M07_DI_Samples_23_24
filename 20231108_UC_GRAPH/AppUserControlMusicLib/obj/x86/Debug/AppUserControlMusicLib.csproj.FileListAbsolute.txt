@@ -46,3 +46,13 @@ E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_
 E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\obj\x86\Debug\qualifiers.txt.intermediate
 E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\obj\x86\Debug\ProjectArchitectures.txt
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\bin\x86\Debug\View\UIEqualizer.xbf
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\obj\x86\Debug\View\UIEqualizer.g.i.cs
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\obj\x86\Debug\View\UIEqualizer.g.cs
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\obj\x86\Debug\View\UIEqualizer.xaml
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\obj\x86\Debug\View\UIEqualizer.xbf
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\bin\x86\Debug\View\UIBotonera.xbf
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\obj\x86\Debug\View\UIBotonera.g.i.cs
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\obj\x86\Debug\View\UIBotonera.g.cs
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\obj\x86\Debug\View\UIBotonera.xaml
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\obj\x86\Debug\View\UIBotonera.xbf

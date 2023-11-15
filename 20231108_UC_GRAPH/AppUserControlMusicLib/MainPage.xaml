@@ -6,11 +6,29 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:view="using:AppUserControlMusicLib.View"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded">
 
     <Grid Background="LightSlateGray">
         <TextBlock Text="{Binding ElementName=uiVol, Path=Valor}"></TextBlock>
-        <view:UIVolume x:Name="uiVol" OnValorChanged="UIVolume_OnValorChanged" Width="200" Height="100" Max="10" Valor="2" Min="0" Step="1"></view:UIVolume>
+        <StackPanel>
+
+           
+            <ListView x:Name="lsbValors"
+          ScrollViewer.HorizontalScrollMode="Enabled"
+          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+          ScrollViewer.IsHorizontalRailEnabled="True"
+                      >
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+            </ListView>
+
+            <view:UIBotonera x:Name="botonera" Step="10" Max="100" Min="0" ></view:UIBotonera>
+        
+        </StackPanel>
         
         <!--<Canvas Background="#4c687e">
             <Image Source="Assets/button.png" Width="100" Height="100">

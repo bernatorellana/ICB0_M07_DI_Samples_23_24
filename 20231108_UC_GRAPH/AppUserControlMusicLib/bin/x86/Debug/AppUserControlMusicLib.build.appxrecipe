@@ -73,6 +73,12 @@
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\bin\x86\Debug\View\UIBotonera.xbf">
+      <PackagePath>View\UIBotonera.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\bin\x86\Debug\View\UIEqualizer.xbf">
+      <PackagePath>View\UIEqualizer.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231108_UC_GRAPH\AppUserControlMusicLib\bin\x86\Debug\View\UIVolume.xbf">
       <PackagePath>View\UIVolume.xbf</PackagePath>
     </AppxPackagedFile>

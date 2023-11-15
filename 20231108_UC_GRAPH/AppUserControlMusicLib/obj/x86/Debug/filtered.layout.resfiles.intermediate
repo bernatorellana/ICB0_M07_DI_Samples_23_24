@@ -10,5 +10,7 @@ Assets\Wide310x150Logo.scale-200.png
 App.xbf
 AppUserControlMusicLib.xr.xml
 MainPage.xbf
+View\UIBotonera.xbf
+View\UIEqualizer.xbf
 View\UIVolume.xbf
 Properties\Default.rd.xml

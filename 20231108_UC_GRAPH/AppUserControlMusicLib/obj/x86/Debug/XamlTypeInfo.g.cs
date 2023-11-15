@@ -189,19 +189,27 @@ namespace AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
-            _typeNameTable[0] = "AppUserControlMusicLib.View.UIVolume";
+            _typeNameTable = new string[9];
+            _typeNameTable[0] = "AppUserControlMusicLib.View.UIBotonera";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[2] = "Int32";
-            _typeNameTable[3] = "AppUserControlMusicLib.MainPage";
-            _typeNameTable[4] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[3] = "System.Collections.Generic.List`1<Int32>";
+            _typeNameTable[4] = "Object";
+            _typeNameTable[5] = "AppUserControlMusicLib.MainPage";
+            _typeNameTable[6] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[7] = "AppUserControlMusicLib.View.UIEqualizer";
+            _typeNameTable[8] = "AppUserControlMusicLib.View.UIVolume";
 
-            _typeTable = new global::System.Type[5];
-            _typeTable[0] = typeof(global::AppUserControlMusicLib.View.UIVolume);
+            _typeTable = new global::System.Type[9];
+            _typeTable[0] = typeof(global::AppUserControlMusicLib.View.UIBotonera);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[2] = typeof(global::System.Int32);
-            _typeTable[3] = typeof(global::AppUserControlMusicLib.MainPage);
-            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[3] = typeof(global::System.Collections.Generic.List<global::System.Int32>);
+            _typeTable[4] = typeof(global::System.Object);
+            _typeTable[5] = typeof(global::AppUserControlMusicLib.MainPage);
+            _typeTable[6] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[7] = typeof(global::AppUserControlMusicLib.View.UIEqualizer);
+            _typeTable[8] = typeof(global::AppUserControlMusicLib.View.UIVolume);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -236,8 +244,17 @@ namespace AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_UIVolume() { return new global::AppUserControlMusicLib.View.UIVolume(); }
-        private object Activate_3_MainPage() { return new global::AppUserControlMusicLib.MainPage(); }
+        private object Activate_0_UIBotonera() { return new global::AppUserControlMusicLib.View.UIBotonera(); }
+        private object Activate_3_List() { return new global::System.Collections.Generic.List<global::System.Int32>(); }
+        private object Activate_5_MainPage() { return new global::AppUserControlMusicLib.MainPage(); }
+        private object Activate_7_UIEqualizer() { return new global::AppUserControlMusicLib.View.UIEqualizer(); }
+        private object Activate_8_UIVolume() { return new global::AppUserControlMusicLib.View.UIVolume(); }
+        private void VectorAdd_3_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::System.Int32>)instance;
+            var newItem = (global::System.Int32)item;
+            collection.Add(newItem);
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -249,13 +266,13 @@ namespace AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  AppUserControlMusicLib.View.UIVolume
+            case 0:   //  AppUserControlMusicLib.View.UIBotonera
                 userType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_0_UIVolume;
-                userType.AddMemberName("Max");
-                userType.AddMemberName("Valor");
-                userType.AddMemberName("Min");
+                userType.Activator = Activate_0_UIBotonera;
                 userType.AddMemberName("Step");
+                userType.AddMemberName("Max");
+                userType.AddMemberName("Min");
+                userType.AddMemberName("Valors");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -268,57 +285,170 @@ namespace AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo
                 xamlType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  AppUserControlMusicLib.MainPage
+            case 3:   //  System.Collections.Generic.List`1<Int32>
+                userType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_3_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 4:   //  Object
+                xamlType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 5:   //  AppUserControlMusicLib.MainPage
                 userType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_MainPage;
+                userType.Activator = Activate_5_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  Windows.UI.Xaml.Controls.Page
+            case 6:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 7:   //  AppUserControlMusicLib.View.UIEqualizer
+                userType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_7_UIEqualizer;
+                userType.AddMemberName("Valor");
+                userType.AddMemberName("Min");
+                userType.AddMemberName("Max");
+                userType.AddMemberName("Step");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  AppUserControlMusicLib.View.UIVolume
+                userType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_8_UIVolume;
+                userType.AddMemberName("Valor");
+                userType.AddMemberName("Min");
+                userType.AddMemberName("Max");
+                userType.AddMemberName("Step");
+                userType.SetIsLocalType();
+                xamlType = userType;
                 break;
             }
             return xamlType;
         }
 
 
-        private object get_0_UIVolume_Max(object instance)
+        private object get_0_UIBotonera_Step(object instance)
         {
-            var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
+            var that = (global::AppUserControlMusicLib.View.UIBotonera)instance;
+            return that.Step;
+        }
+        private void set_0_UIBotonera_Step(object instance, object Value)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIBotonera)instance;
+            that.Step = (global::System.Int32)Value;
+        }
+        private object get_1_UIBotonera_Max(object instance)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIBotonera)instance;
             return that.Max;
         }
-        private void set_0_UIVolume_Max(object instance, object Value)
+        private void set_1_UIBotonera_Max(object instance, object Value)
         {
-            var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
+            var that = (global::AppUserControlMusicLib.View.UIBotonera)instance;
             that.Max = (global::System.Int32)Value;
         }
-        private object get_1_UIVolume_Valor(object instance)
+        private object get_2_UIBotonera_Min(object instance)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIBotonera)instance;
+            return that.Min;
+        }
+        private void set_2_UIBotonera_Min(object instance, object Value)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIBotonera)instance;
+            that.Min = (global::System.Int32)Value;
+        }
+        private object get_3_UIBotonera_Valors(object instance)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIBotonera)instance;
+            return that.Valors;
+        }
+        private void set_3_UIBotonera_Valors(object instance, object Value)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIBotonera)instance;
+            that.Valors = (global::System.Collections.Generic.List<global::System.Int32>)Value;
+        }
+        private object get_4_UIEqualizer_Valor(object instance)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIEqualizer)instance;
+            return that.Valor;
+        }
+        private void set_4_UIEqualizer_Valor(object instance, object Value)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIEqualizer)instance;
+            that.Valor = (global::System.Int32)Value;
+        }
+        private object get_5_UIEqualizer_Min(object instance)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIEqualizer)instance;
+            return that.Min;
+        }
+        private void set_5_UIEqualizer_Min(object instance, object Value)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIEqualizer)instance;
+            that.Min = (global::System.Int32)Value;
+        }
+        private object get_6_UIEqualizer_Max(object instance)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIEqualizer)instance;
+            return that.Max;
+        }
+        private void set_6_UIEqualizer_Max(object instance, object Value)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIEqualizer)instance;
+            that.Max = (global::System.Int32)Value;
+        }
+        private object get_7_UIEqualizer_Step(object instance)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIEqualizer)instance;
+            return that.Step;
+        }
+        private void set_7_UIEqualizer_Step(object instance, object Value)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIEqualizer)instance;
+            that.Step = (global::System.Int32)Value;
+        }
+        private object get_8_UIVolume_Valor(object instance)
         {
             var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
             return that.Valor;
         }
-        private void set_1_UIVolume_Valor(object instance, object Value)
+        private void set_8_UIVolume_Valor(object instance, object Value)
         {
             var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
             that.Valor = (global::System.Int32)Value;
         }
-        private object get_2_UIVolume_Min(object instance)
+        private object get_9_UIVolume_Min(object instance)
         {
             var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
             return that.Min;
         }
-        private void set_2_UIVolume_Min(object instance, object Value)
+        private void set_9_UIVolume_Min(object instance, object Value)
         {
             var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
             that.Min = (global::System.Int32)Value;
         }
-        private object get_3_UIVolume_Step(object instance)
+        private object get_10_UIVolume_Max(object instance)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
+            return that.Max;
+        }
+        private void set_10_UIVolume_Max(object instance, object Value)
+        {
+            var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
+            that.Max = (global::System.Int32)Value;
+        }
+        private object get_11_UIVolume_Step(object instance)
         {
             var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
             return that.Step;
         }
-        private void set_3_UIVolume_Step(object instance, object Value)
+        private void set_11_UIVolume_Step(object instance, object Value)
         {
             var that = (global::AppUserControlMusicLib.View.UIVolume)instance;
             that.Step = (global::System.Int32)Value;
@@ -331,33 +461,89 @@ namespace AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo
 
             switch (longMemberName)
             {
-            case "AppUserControlMusicLib.View.UIVolume.Max":
-                userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIVolume");
+            case "AppUserControlMusicLib.View.UIBotonera.Step":
+                userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIBotonera");
+                xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Step", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_0_UIBotonera_Step;
+                xamlMember.Setter = set_0_UIBotonera_Step;
+                break;
+            case "AppUserControlMusicLib.View.UIBotonera.Max":
+                userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIBotonera");
                 xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Max", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_0_UIVolume_Max;
-                xamlMember.Setter = set_0_UIVolume_Max;
+                xamlMember.Getter = get_1_UIBotonera_Max;
+                xamlMember.Setter = set_1_UIBotonera_Max;
+                break;
+            case "AppUserControlMusicLib.View.UIBotonera.Min":
+                userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIBotonera");
+                xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Min", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_2_UIBotonera_Min;
+                xamlMember.Setter = set_2_UIBotonera_Min;
+                break;
+            case "AppUserControlMusicLib.View.UIBotonera.Valors":
+                userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIBotonera");
+                xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Valors", "System.Collections.Generic.List`1<Int32>");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_3_UIBotonera_Valors;
+                xamlMember.Setter = set_3_UIBotonera_Valors;
+                break;
+            case "AppUserControlMusicLib.View.UIEqualizer.Valor":
+                userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIEqualizer");
+                xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Valor", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_4_UIEqualizer_Valor;
+                xamlMember.Setter = set_4_UIEqualizer_Valor;
+                break;
+            case "AppUserControlMusicLib.View.UIEqualizer.Min":
+                userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIEqualizer");
+                xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Min", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_5_UIEqualizer_Min;
+                xamlMember.Setter = set_5_UIEqualizer_Min;
+                break;
+            case "AppUserControlMusicLib.View.UIEqualizer.Max":
+                userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIEqualizer");
+                xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Max", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_6_UIEqualizer_Max;
+                xamlMember.Setter = set_6_UIEqualizer_Max;
+                break;
+            case "AppUserControlMusicLib.View.UIEqualizer.Step":
+                userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIEqualizer");
+                xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Step", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_7_UIEqualizer_Step;
+                xamlMember.Setter = set_7_UIEqualizer_Step;
                 break;
             case "AppUserControlMusicLib.View.UIVolume.Valor":
                 userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIVolume");
                 xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Valor", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_1_UIVolume_Valor;
-                xamlMember.Setter = set_1_UIVolume_Valor;
+                xamlMember.Getter = get_8_UIVolume_Valor;
+                xamlMember.Setter = set_8_UIVolume_Valor;
                 break;
             case "AppUserControlMusicLib.View.UIVolume.Min":
                 userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIVolume");
                 xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Min", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_2_UIVolume_Min;
-                xamlMember.Setter = set_2_UIVolume_Min;
+                xamlMember.Getter = get_9_UIVolume_Min;
+                xamlMember.Setter = set_9_UIVolume_Min;
+                break;
+            case "AppUserControlMusicLib.View.UIVolume.Max":
+                userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIVolume");
+                xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Max", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_10_UIVolume_Max;
+                xamlMember.Setter = set_10_UIVolume_Max;
                 break;
             case "AppUserControlMusicLib.View.UIVolume.Step":
                 userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIVolume");
                 xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Step", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_3_UIVolume_Step;
-                xamlMember.Setter = set_3_UIVolume_Step;
+                xamlMember.Getter = get_11_UIVolume_Step;
+                xamlMember.Setter = set_11_UIVolume_Step;
                 break;
             }
             return xamlMember;

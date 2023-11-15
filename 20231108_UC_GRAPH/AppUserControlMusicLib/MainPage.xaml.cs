@@ -27,9 +27,10 @@ namespace AppUserControlMusicLib
             this.InitializeComponent();
         }
 
-        private void UIVolume_OnValorChanged(object sender, EventArgs e)
+        private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-
+            botonera.Valors = new List<int> { 10, 20, 30, 40, 50, 60 };
+            lsbValors.ItemsSource = botonera.Valors;
         }
     }
 }
