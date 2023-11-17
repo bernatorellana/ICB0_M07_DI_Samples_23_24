@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppUserControlMusicLib.util;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,15 +26,15 @@ namespace AppUserControlMusicLib.View
         }
 
 
-        public List<Int32> Valors
+        public OC<Int32> Valors
         {
-            get { return (List<Int32>)GetValue(ValorsProperty); }
+            get { return (OC<Int32>)GetValue(ValorsProperty); }
             set { SetValue(ValorsProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for Valors.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ValorsProperty =
-            DependencyProperty.Register("Valors", typeof(List<Int32>), typeof(UIBotonera), new PropertyMetadata(new List<Int32>(), ValorsChangedCallbackStatic));
+            DependencyProperty.Register("Valors", typeof(OC<Int32>), typeof(UIBotonera), new PropertyMetadata(new OC<Int32>(), ValorsChangedCallbackStatic));
 
         private static void ValorsChangedCallbackStatic(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
@@ -56,14 +57,21 @@ namespace AppUserControlMusicLib.View
                 ui.Max = this.Max;
                 ui.Min = this.Min;
                 ui.Step = this.Step;
-                ui.Width = ui.Height = 100;
+                ui.Width = 100;
+                ui.Height = 300;
                 ui.Tag = n++;
                 ui.Margin = new Thickness(10);
                 stpBotons.Children.Add(ui);
+                ui.OnValorChanged += Ui_OnValorChanged;
             }
         }
 
-
+        private void Ui_OnValorChanged(object sender, EventArgs e)
+        {
+            UIVolume uivol = (UIVolume)sender;
+            int idx = (int)uivol.Tag;
+            Valors[idx] = uivol.Valor;
+        }
 
         public int Max
         {

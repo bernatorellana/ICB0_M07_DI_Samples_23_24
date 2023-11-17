@@ -19,7 +19,20 @@
       <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Padding" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Orientation" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Border">
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Child" />
+      <RootProperty Name="Background" />
+    </RootType>
+    <RootType FullName="AppUserControlMusicLib.View.UIBotonera">
+      <RootProperty Name="Step" />
+      <RootProperty Name="Max" />
+      <RootProperty Name="Min" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsPanel" />
@@ -31,11 +44,6 @@
       <RootMethod Name="SetHorizontalScrollBarVisibility" />
       <RootMethod Name="GetIsHorizontalRailEnabled" />
       <RootMethod Name="SetIsHorizontalRailEnabled" />
-    </RootType>
-    <RootType FullName="AppUserControlMusicLib.View.UIBotonera">
-      <RootProperty Name="Step" />
-      <RootProperty Name="Max" />
-      <RootProperty Name="Min" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
       <RootProperty Name="Template" />
@@ -52,11 +60,11 @@
       <RootProperty Name="Content" />
       <RootEvent Name="Loaded" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Border">
-      <RootProperty Name="Background" />
-      <RootProperty Name="Child" />
+    <RootType FullName="AppUserControlMusicLib.View.UIEqualizer">
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
     </RootType>
-    <RootType FullName="AppUserControlMusicLib.View.UIEqualizer" />
     <RootType FullName="Windows.UI.Xaml.Controls.Canvas" />
     <RootType FullName="AppUserControlMusicLib.View.UIVolume" />
   </Roots.RootTypes>

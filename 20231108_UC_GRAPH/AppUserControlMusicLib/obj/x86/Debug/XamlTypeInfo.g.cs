@@ -189,27 +189,31 @@ namespace AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[9];
+            _typeNameTable = new string[11];
             _typeNameTable[0] = "AppUserControlMusicLib.View.UIBotonera";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[2] = "Int32";
-            _typeNameTable[3] = "System.Collections.Generic.List`1<Int32>";
-            _typeNameTable[4] = "Object";
-            _typeNameTable[5] = "AppUserControlMusicLib.MainPage";
-            _typeNameTable[6] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[7] = "AppUserControlMusicLib.View.UIEqualizer";
-            _typeNameTable[8] = "AppUserControlMusicLib.View.UIVolume";
+            _typeNameTable[3] = "AppUserControlMusicLib.util.OC`1<Int32>";
+            _typeNameTable[4] = "System.Collections.ObjectModel.ObservableCollection`1<Int32>";
+            _typeNameTable[5] = "System.Collections.ObjectModel.Collection`1<Int32>";
+            _typeNameTable[6] = "Object";
+            _typeNameTable[7] = "AppUserControlMusicLib.MainPage";
+            _typeNameTable[8] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[9] = "AppUserControlMusicLib.View.UIEqualizer";
+            _typeNameTable[10] = "AppUserControlMusicLib.View.UIVolume";
 
-            _typeTable = new global::System.Type[9];
+            _typeTable = new global::System.Type[11];
             _typeTable[0] = typeof(global::AppUserControlMusicLib.View.UIBotonera);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[2] = typeof(global::System.Int32);
-            _typeTable[3] = typeof(global::System.Collections.Generic.List<global::System.Int32>);
-            _typeTable[4] = typeof(global::System.Object);
-            _typeTable[5] = typeof(global::AppUserControlMusicLib.MainPage);
-            _typeTable[6] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[7] = typeof(global::AppUserControlMusicLib.View.UIEqualizer);
-            _typeTable[8] = typeof(global::AppUserControlMusicLib.View.UIVolume);
+            _typeTable[3] = typeof(global::AppUserControlMusicLib.util.OC<global::System.Int32>);
+            _typeTable[4] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::System.Int32>);
+            _typeTable[5] = typeof(global::System.Collections.ObjectModel.Collection<global::System.Int32>);
+            _typeTable[6] = typeof(global::System.Object);
+            _typeTable[7] = typeof(global::AppUserControlMusicLib.MainPage);
+            _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[9] = typeof(global::AppUserControlMusicLib.View.UIEqualizer);
+            _typeTable[10] = typeof(global::AppUserControlMusicLib.View.UIVolume);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -245,11 +249,25 @@ namespace AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo
         }
 
         private object Activate_0_UIBotonera() { return new global::AppUserControlMusicLib.View.UIBotonera(); }
-        private object Activate_3_List() { return new global::System.Collections.Generic.List<global::System.Int32>(); }
-        private object Activate_5_MainPage() { return new global::AppUserControlMusicLib.MainPage(); }
-        private object Activate_7_UIEqualizer() { return new global::AppUserControlMusicLib.View.UIEqualizer(); }
-        private object Activate_8_UIVolume() { return new global::AppUserControlMusicLib.View.UIVolume(); }
-        private void VectorAdd_3_List(object instance, object item)
+        private object Activate_3_OC() { return new global::AppUserControlMusicLib.util.OC<global::System.Int32>(); }
+        private object Activate_4_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::System.Int32>(); }
+        private object Activate_5_Collection() { return new global::System.Collections.ObjectModel.Collection<global::System.Int32>(); }
+        private object Activate_7_MainPage() { return new global::AppUserControlMusicLib.MainPage(); }
+        private object Activate_9_UIEqualizer() { return new global::AppUserControlMusicLib.View.UIEqualizer(); }
+        private object Activate_10_UIVolume() { return new global::AppUserControlMusicLib.View.UIVolume(); }
+        private void VectorAdd_3_OC(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::System.Int32>)instance;
+            var newItem = (global::System.Int32)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_4_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::System.Int32>)instance;
+            var newItem = (global::System.Int32)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_5_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.Int32>)instance;
             var newItem = (global::System.Int32)item;
@@ -285,31 +303,46 @@ namespace AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo
                 xamlType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  System.Collections.Generic.List`1<Int32>
-                userType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_3_List;
+            case 3:   //  AppUserControlMusicLib.util.OC`1<Int32>
+                userType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.ObservableCollection`1<Int32>"));
+                userType.CollectionAdd = VectorAdd_3_OC;
                 userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 4:   //  Object
-                xamlType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 5:   //  AppUserControlMusicLib.MainPage
-                userType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  Windows.UI.Xaml.Controls.Page
+            case 4:   //  System.Collections.ObjectModel.ObservableCollection`1<Int32>
+                userType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Int32>"));
+                userType.Activator = Activate_4_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_4_ObservableCollection;
+                xamlType = userType;
+                break;
+
+            case 5:   //  System.Collections.ObjectModel.Collection`1<Int32>
+                userType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_5_Collection;
+                userType.CollectionAdd = VectorAdd_5_Collection;
+                xamlType = userType;
+                break;
+
+            case 6:   //  Object
                 xamlType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 7:   //  AppUserControlMusicLib.View.UIEqualizer
+            case 7:   //  AppUserControlMusicLib.MainPage
+                userType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 9:   //  AppUserControlMusicLib.View.UIEqualizer
                 userType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_7_UIEqualizer;
+                userType.Activator = Activate_9_UIEqualizer;
                 userType.AddMemberName("Valor");
                 userType.AddMemberName("Min");
                 userType.AddMemberName("Max");
@@ -318,9 +351,9 @@ namespace AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 8:   //  AppUserControlMusicLib.View.UIVolume
+            case 10:   //  AppUserControlMusicLib.View.UIVolume
                 userType = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_8_UIVolume;
+                userType.Activator = Activate_10_UIVolume;
                 userType.AddMemberName("Valor");
                 userType.AddMemberName("Min");
                 userType.AddMemberName("Max");
@@ -371,7 +404,7 @@ namespace AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo
         private void set_3_UIBotonera_Valors(object instance, object Value)
         {
             var that = (global::AppUserControlMusicLib.View.UIBotonera)instance;
-            that.Valors = (global::System.Collections.Generic.List<global::System.Int32>)Value;
+            that.Valors = (global::AppUserControlMusicLib.util.OC<global::System.Int32>)Value;
         }
         private object get_4_UIEqualizer_Valor(object instance)
         {
@@ -484,7 +517,7 @@ namespace AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo
                 break;
             case "AppUserControlMusicLib.View.UIBotonera.Valors":
                 userType = (global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AppUserControlMusicLib.View.UIBotonera");
-                xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Valors", "System.Collections.Generic.List`1<Int32>");
+                xamlMember = new global::AppUserControlMusicLib.AppUserControlMusicLib_XamlTypeInfo.XamlMember(this, "Valors", "AppUserControlMusicLib.util.OC`1<Int32>");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_3_UIBotonera_Valors;
                 xamlMember.Setter = set_3_UIBotonera_Valors;

@@ -100,6 +100,12 @@ namespace AppUserControlMusicLib.View
             // Netejar TOTS els fills
             cnv.Children.Clear();
 
+            eq.Valor = this.Valor;
+            eq.Min = this.Min;
+            eq.Max = this.Max;
+            eq.Step = this.Step;
+
+
 
             // Inicialitzem l'angle base
             angleReserva = 50;
@@ -112,7 +118,7 @@ namespace AppUserControlMusicLib.View
             double dimension = Math.Min(this.Width, this.Height);
             image.Width = dimension * 0.7;
             image.Height = dimension * 0.7;
-            Canvas.SetTop(image, this.Height * 0.5 - image.Height * 0.5);
+            Canvas.SetTop(image, this.Height * 0.75 - image.Height * 0.5);
             Canvas.SetLeft(image, this.Width * 0.5 - image.Width * 0.5);
             cnv.Children.Add(image);
 
@@ -141,10 +147,10 @@ namespace AppUserControlMusicLib.View
                 c.Width = midaLletra;
                 c.Height = midaLletra;
                 Canvas.SetLeft(c, this.Width*0.5 + image.Width * 0.5);
-                Canvas.SetTop(c, this.Height*0.5 - midaLletra * 0.5);
+                Canvas.SetTop(c, this.Height*0.75 - midaLletra * 0.5);
                 CompositeTransform ct = new CompositeTransform();
                 ct.CenterX = -image.Width*0.5;
-                ct.CenterY = midaLletra * 0.5;
+                ct.CenterY = midaLletra * 0.7;
                 ct.Rotation = angle;
                 angle -= pasAngular;
                 c.RenderTransform = ct;
@@ -153,7 +159,7 @@ namespace AppUserControlMusicLib.View
 
                 //*************************************************
                 TextBlock t = new TextBlock();
-                t.FontSize = 15;
+                t.FontSize = 12;
                 t.FontWeight = FontWeights.Bold;
                 t.Width = midaLletra;
                 t.Height = midaLletra;

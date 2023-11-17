@@ -8,10 +8,14 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400"
-                               >
-
-    <Canvas x:ConnectionId='2' x:Name="cnv">
-
-    </Canvas>
+                               
+    x:Name="uc">
+    <StackPanel>
+        <Canvas x:ConnectionId='2' x:Name="cnv"/>
+        <local:UIEqualizer x:ConnectionId='3' 
+                            x:Name="eq"
+                           Height="100" 
+                           Width="20" Margin="20"></local:UIEqualizer>
+    </StackPanel>
 </UserControl>
 

@@ -9,7 +9,7 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <StackPanel x:ConnectionId='2' x:Name="stpBotons">
+    <StackPanel x:ConnectionId='2' x:Name="stpBotons" Orientation="Horizontal">
 
     </StackPanel>
 </UserControl>

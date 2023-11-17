@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppUserControlMusicLib.util;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace AppUserControlMusicLib
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            botonera.Valors = new List<int> { 10, 20, 30, 40, 50, 60 };
+            botonera.Valors = new OC<int> { 10, 20, 30, 40, 50, 60 };
             lsbValors.ItemsSource = botonera.Valors;
         }
     }

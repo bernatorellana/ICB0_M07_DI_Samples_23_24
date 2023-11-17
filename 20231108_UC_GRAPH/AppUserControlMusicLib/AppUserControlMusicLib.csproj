@@ -123,6 +123,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="util\OC.cs" />
     <Compile Include="View\UIBotonera.xaml.cs">
       <DependentUpon>UIBotonera.xaml</DependentUpon>
     </Compile>

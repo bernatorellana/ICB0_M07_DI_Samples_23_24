@@ -11,23 +11,24 @@
 
     <Grid Background="LightSlateGray">
         <TextBlock Text="{Binding ElementName=uiVol, Path=Valor}"></TextBlock>
-        <StackPanel>
+        <StackPanel Padding="20">
 
-           
-            <ListView x:ConnectionId='2' x:Name="lsbValors"
-          ScrollViewer.HorizontalScrollMode="Enabled"
-          ScrollViewer.HorizontalScrollBarVisibility="Auto"
-          ScrollViewer.IsHorizontalRailEnabled="True"
-                      >
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <VirtualizingStackPanel Orientation="Horizontal" />
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
-            </ListView>
-
-            <view:UIBotonera x:ConnectionId='3' x:Name="botonera" Step="10" Max="100" Min="0" ></view:UIBotonera>
-        
+            <Border BorderThickness="2" BorderBrush="DarkGray">
+                <ListView x:ConnectionId='3' x:Name="lsbValors"
+              ScrollViewer.HorizontalScrollMode="Enabled"
+              ScrollViewer.HorizontalScrollBarVisibility="Auto"
+              ScrollViewer.IsHorizontalRailEnabled="True"
+                          >
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                </ListView>
+            </Border>
+            <Border BorderThickness="2" BorderBrush="DarkGray">
+                <view:UIBotonera x:ConnectionId='2' x:Name="botonera" Step="10" Max="100" Min="0" ></view:UIBotonera>
+            </Border>
         </StackPanel>
         
         <!--<Canvas Background="#4c687e">

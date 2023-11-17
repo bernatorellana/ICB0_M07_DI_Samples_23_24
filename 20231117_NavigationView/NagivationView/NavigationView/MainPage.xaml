@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="NavigationView.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NavigationView"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <NavigationView  PaneTitle="Hello" ItemInvoked="NavigationView_ItemInvoked"
+                     IsBackEnabled="False"
+                     >
+        <NavigationView.MenuItems>
+            <NavigationViewItem x:Name="nviOpcioA" Content="Nav Item A" >
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xEBB5;"/>
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+            <NavigationViewItem Icon="AddFriend" x:Name="nviOpcioB" Content="Nav Item B"/>
+            <NavigationViewItem Icon="AlignRight" Content="Nav Item C"/>
+        </NavigationView.MenuItems>
+           
+        <Frame x:Name="ContentFrame"/>
+    </NavigationView>
+
+</Page>
