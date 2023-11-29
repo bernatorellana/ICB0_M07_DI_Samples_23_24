@@ -12,10 +12,10 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Grid.Row="0">
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="20">
             <TextBlock>Cognom:</TextBlock>
             <TextBox x:ConnectionId='3' x:Name="txbCognom"></TextBox>
             <Button>Filter</Button>
