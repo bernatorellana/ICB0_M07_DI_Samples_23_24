@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBLib;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,11 @@ namespace DemoSQlite
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            dtgEmpleats.ItemsSource = DBEmpleat.getEmpleats();
         }
     }
 }

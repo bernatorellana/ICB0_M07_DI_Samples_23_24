@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "czTkqIRwTnAMj1SVaP/pWDp3qFkz0KQukSY5TgjwBuQZMf2dRIybuTbvezv2Shs30khJgmYnlhPp+HZt7fI6aw==",
+  "dgSpecHash": "zOZ4dgUfYvPZFv7HHMlNUadslEiroZC7dswl5zZrUW91bOMoJIjEoGtxF2VcAdDk+WlX3HLE4AughJnZMzBFfg==",
   "success": true,
   "projectFilePath": "E:\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\ICB0_M07_DI_Samples_23_24\\20231127_SQLite\\DemoSQlite\\DemoSQlite\\DemoSQlite.csproj",
   "expectedPackageFiles": [
@@ -24,6 +24,7 @@
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.netcore.platforms\\2.1.0\\microsoft.netcore.platforms.2.1.0.nupkg.sha512",
     "C:\\Users\\Usuari\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.netcore.universalwindowsplatform\\6.2.14\\microsoft.netcore.universalwindowsplatform.6.2.14.nupkg.sha512",
+    "C:\\Users\\Usuari\\.nuget\\packages\\microsoft.toolkit.uwp.ui.controls.datagrid\\5.1.0\\microsoft.toolkit.uwp.ui.controls.datagrid.5.1.0.nupkg.sha512",
     "C:\\Users\\Usuari\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\Usuari\\.nuget\\packages\\remotion.linq\\2.1.1\\remotion.linq.2.1.1.nupkg.sha512",
     "C:\\Users\\Usuari\\.nuget\\packages\\runtime.any.system.collections\\4.3.0\\runtime.any.system.collections.4.3.0.nupkg.sha512",

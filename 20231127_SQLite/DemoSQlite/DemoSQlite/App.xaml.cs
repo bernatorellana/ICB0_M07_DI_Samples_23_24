@@ -1,6 +1,8 @@
-﻿using DBLib;
+﻿
+using DBLib;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -46,6 +48,8 @@ namespace DemoSQlite
                 string name = SQLiteDBContext.DB_FILENAME;
                 var dbFolderAppData = ApplicationData.Current.LocalFolder;
                 StorageFolder dbFolder = await dbFolderAppData.CreateFolderAsync(SQLiteDBContext.DB_PATH, CreationCollisionOption.OpenIfExists);
+
+                Debug.WriteLine("RUTA BD:"+dbFolder.Path);
                 StorageFile dbFile = null;
                 try
                 {
