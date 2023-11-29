@@ -1,0 +1,5 @@
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib3\obj\Debug\netstandard2.0\DBLib3.csproj.AssemblyReference.cache
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib3\obj\Debug\netstandard2.0\DBLib3.GeneratedMSBuildEditorConfig.editorconfig
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib3\obj\Debug\netstandard2.0\DBLib3.AssemblyInfoInputs.cache
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib3\obj\Debug\netstandard2.0\DBLib3.AssemblyInfo.cs
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib3\obj\Debug\netstandard2.0\DBLib3.csproj.CoreCompileInputs.cache

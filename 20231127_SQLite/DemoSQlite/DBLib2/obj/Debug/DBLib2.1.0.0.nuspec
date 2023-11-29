@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>DBLib2</id>
+    <version>1.0.0</version>
+    <authors>DBLib2</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0-windows10.0.22000">
+        <dependency id="Microsoft.EntityFrameworkCore" version="7.0.14" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.Sqlite" version="7.0.14" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib2\bin\Debug\net6.0-windows10.0.22000.0\DBLib2.dll" target="lib\net6.0-windows10.0.22000\DBLib2.dll" />
+  </files>
+</package>

@@ -1,0 +1,12 @@
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib2\bin\Debug\net6.0-windows10.0.22000.0\DBLib2.deps.json
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib2\bin\Debug\net6.0-windows10.0.22000.0\DBLib2.dll
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib2\bin\Debug\net6.0-windows10.0.22000.0\DBLib2.pdb
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib2\obj\Debug\net6.0-windows10.0.22000.0\DBLib2.csproj.AssemblyReference.cache
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib2\obj\Debug\net6.0-windows10.0.22000.0\DBLib2.GeneratedMSBuildEditorConfig.editorconfig
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib2\obj\Debug\net6.0-windows10.0.22000.0\DBLib2.AssemblyInfoInputs.cache
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib2\obj\Debug\net6.0-windows10.0.22000.0\DBLib2.AssemblyInfo.cs
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib2\obj\Debug\net6.0-windows10.0.22000.0\DBLib2.csproj.CoreCompileInputs.cache
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib2\obj\Debug\net6.0-windows10.0.22000.0\DBLib2.dll
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib2\obj\Debug\net6.0-windows10.0.22000.0\refint\DBLib2.dll
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib2\obj\Debug\net6.0-windows10.0.22000.0\DBLib2.pdb
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib2\obj\Debug\net6.0-windows10.0.22000.0\ref\DBLib2.dll
