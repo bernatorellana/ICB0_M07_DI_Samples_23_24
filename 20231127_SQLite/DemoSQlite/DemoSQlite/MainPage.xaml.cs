@@ -30,7 +30,18 @@ namespace DemoSQlite
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            dtgEmpleats.ItemsSource = DBEmpleat.getEmpleats();
+            launchQuery();
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            launchQuery();
+        }
+
+        private void launchQuery()
+        {
+            dtgEmpleats.ItemsSource = DBEmpleat.getEmpleats(txbCognom.Text);
         }
     }
 }

@@ -41,7 +41,7 @@ namespace DBLib
 
         #endregion
     
-        public static List<DBEmpleat> getEmpleats()
+        public static List<DBEmpleat> getEmpleats(String pCognom = "")
         {
             using(var context = new SQLiteDBContext()){
                 using(var connexio = context.Database.GetDbConnection())
@@ -49,8 +49,9 @@ namespace DBLib
                     connexio.Open();
                     using(var consulta = connexio.CreateCommand()) {
 
-                        consulta.CommandText = @"
-                            select * from emp;
+                        consulta.CommandText = $@"
+                            select * from emp
+                               where cognom like '%{pCognom}%';
                         ";
                         DbDataReader reader = consulta.ExecuteReader();
                         List<DBEmpleat> empleats = new List<DBEmpleat>();

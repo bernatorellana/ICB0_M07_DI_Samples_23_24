@@ -18,7 +18,7 @@
         <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="20">
             <TextBlock>Cognom:</TextBlock>
             <TextBox x:Name="txbCognom"></TextBox>
-            <Button>Filter</Button>
+            <Button Click="Button_Click">Filter</Button>
         </StackPanel>
         <controls:DataGrid x:Name="dtgEmpleats"  Grid.Row="1" ></controls:DataGrid>
     </Grid>
