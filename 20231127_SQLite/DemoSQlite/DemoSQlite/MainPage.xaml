@@ -15,11 +15,25 @@
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="20">
-            <TextBlock>Cognom:</TextBlock>
-            <TextBox x:Name="txbCognom"></TextBox>
-            <Button Click="Button_Click">Filter</Button>
-        </StackPanel>
+        <Grid Grid.Row="0" Margin="20" Padding="20 ">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="0" Grid.Row="0">Cognom:</TextBlock>
+            <TextBox Grid.Column="1" Grid.Row="0" x:Name="txbCognom"></TextBox>
+
+            <TextBlock Grid.Column="0" Grid.Row="1">Posterior a:</TextBlock>
+            <DatePicker  Grid.Column="1" Grid.Row="1" x:Name="dtpDate"></DatePicker>
+
+            <Button Grid.Column="0" Grid.Row="2" Click="Button_Click_1">Clear</Button>
+            <Button Grid.Column="1" Grid.Row="2" Click="Button_Click">Filter</Button>
+        </Grid>
         <controls:DataGrid x:Name="dtgEmpleats"  Grid.Row="1" ></controls:DataGrid>
     </Grid>
 </Page>

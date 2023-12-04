@@ -41,7 +41,15 @@ namespace DemoSQlite
 
         private void launchQuery()
         {
-            dtgEmpleats.ItemsSource = DBEmpleat.getEmpleats(txbCognom.Text);
+
+            DateTime? dt = null;
+            dt = dtpDate.SelectedDate?.Date;
+            dtgEmpleats.ItemsSource = DBEmpleat.getEmpleats(txbCognom.Text, dt );
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            dtpDate.SelectedDate=null;
         }
     }
 }

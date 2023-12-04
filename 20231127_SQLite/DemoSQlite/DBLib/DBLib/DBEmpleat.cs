@@ -41,7 +41,7 @@ namespace DBLib
 
         #endregion
     
-        public static List<DBEmpleat> getEmpleats(String pCognom = "")
+        public static List<DBEmpleat> getEmpleats(String pCognom = "", DateTime? dt = null)
         {
             using(var context = new SQLiteDBContext()){
                 using(var connexio = context.Database.GetDbConnection())
@@ -49,9 +49,34 @@ namespace DBLib
                     connexio.Open();
                     using(var consulta = connexio.CreateCommand()) {
 
-                        consulta.CommandText = $@"
+
+                        //String dataString = "";
+                        //dataString = dt?.ToString("yyyy-MM-dd");
+                        //consulta.CommandText = $@"
+                        //    select * from emp
+                        //       where 
+                        //            ('{pCognom}'='' or  cognom like '%{pCognom}%') and 
+                        //            ('{dataString}'='' or data_alta>'{dataString}');
+                        //";
+                        //---------------------
+                        // Creació de paràmetres
+                        DbParameter paramCognom =  consulta.CreateParameter();
+                        paramCognom.ParameterName = "p_cognom";
+                        paramCognom.Value = "%"+pCognom+"%";
+                        paramCognom.DbType = System.Data.DbType.String;
+                        consulta.Parameters.Add(paramCognom);
+
+                        DbParameter paramDataAlta = consulta.CreateParameter();
+                        paramDataAlta.ParameterName = "p_data_alta";
+                        paramDataAlta.Value = dt == null ? DateTime.MinValue:dt ;
+                        paramDataAlta.DbType = System.Data.DbType.DateTime;
+                        consulta.Parameters.Add(paramDataAlta);
+
+                        consulta.CommandText = @"
                             select * from emp
-                               where cognom like '%{pCognom}%';
+                               where 
+                                    (cognom like @p_cognom) and 
+                                    ( data_alta>@p_data_alta);
                         ";
                         DbDataReader reader = consulta.ExecuteReader();
                         List<DBEmpleat> empleats = new List<DBEmpleat>();
