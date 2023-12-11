@@ -49,7 +49,7 @@ namespace DemoSQlite
             long numEmpleats = DBEmpleat.getNumeroEmpleats(txbCognom.Text, dt );
             txbNumEmpleats.Text = numEmpleats.ToString();
 
-            cboCap.ItemsSource = dtgEmpleats.ItemsSource;
+            cboCap.ItemsSource = dtgEmpleats.ItemsSource; // Pendent de canviar, quan filtrem no hauria de canviar !
             cboCap.DisplayMemberPath = "Cognom";
         }
 
