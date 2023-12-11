@@ -45,6 +45,12 @@ namespace DemoSQlite
             DateTime? dt = null;
             dt = dtpDate.SelectedDate?.Date;
             dtgEmpleats.ItemsSource = DBEmpleat.getEmpleats(txbCognom.Text, dt );
+            // Ara fem el recompte d'empleats
+            long numEmpleats = DBEmpleat.getNumeroEmpleats(txbCognom.Text, dt );
+            txbNumEmpleats.Text = numEmpleats.ToString();
+
+            cboCap.ItemsSource = dtgEmpleats.ItemsSource;
+            cboCap.DisplayMemberPath = "Cognom";
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

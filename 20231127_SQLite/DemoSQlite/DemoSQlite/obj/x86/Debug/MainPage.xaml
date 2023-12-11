@@ -9,32 +9,69 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
                         
     >
+    <StackPanel Orientation="Horizontal">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="20" Padding="20 ">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0">Cognom:</TextBlock>
+                <TextBox x:ConnectionId='11' Grid.Column="1" Grid.Row="0" x:Name="txbCognom"></TextBox>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Margin="20" Padding="20 ">
+                <TextBlock Grid.Column="0" Grid.Row="1">Posterior a:</TextBlock>
+                <DatePicker x:ConnectionId='12'  Grid.Column="1" Grid.Row="1" x:Name="dtpDate"></DatePicker>
+
+                <Button x:ConnectionId='13' Grid.Column="0" Grid.Row="2"                       >Clear</Button>
+                <Button x:ConnectionId='14' Grid.Column="1" Grid.Row="2"                     >Filter</Button>
+            </Grid>
+            <controls:DataGrid x:ConnectionId='9' x:Name="dtgEmpleats"  Grid.Row="1" ></controls:DataGrid>
+            <StackPanel Padding="10"  Grid.Row="2" Orientation="Horizontal">
+                <TextBlock>Número d'empleats:</TextBlock>
+                <TextBlock x:ConnectionId='10' x:Name="txbNumEmpleats"></TextBlock>
+            </StackPanel>
+        </Grid>
+        <Grid Padding="20" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Column="0" Grid.Row="0">Cognom:</TextBlock>
-            <TextBox x:ConnectionId='3' Grid.Column="1" Grid.Row="0" x:Name="txbCognom"></TextBox>
-
-            <TextBlock Grid.Column="0" Grid.Row="1">Posterior a:</TextBlock>
-            <DatePicker x:ConnectionId='4'  Grid.Column="1" Grid.Row="1" x:Name="dtpDate"></DatePicker>
-
-            <Button x:ConnectionId='5' Grid.Column="0" Grid.Row="2"                       >Clear</Button>
-            <Button x:ConnectionId='6' Grid.Column="1" Grid.Row="2"                     >Filter</Button>
+            <TextBlock Grid.Column="0" Grid.Row="0"  Padding="10">Cognom:</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="1"  Padding="10">Ofici:</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="2"  Padding="10">Cap:</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="3"  Padding="10">Data alta:</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="4"  Padding="10">Salari:</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="5"  Padding="10">Comissió:</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="6"  Padding="10">Departament:</TextBlock>
+            <!-- -->
+            <TextBox x:ConnectionId='2'    Grid.Column="1"  Grid.Row="0" x:Name="txbCognomEdit"></TextBox>
+            <TextBox x:ConnectionId='3'    Grid.Column="1"  Grid.Row="1" x:Name="txbOficiEdit"></TextBox>
+            <ComboBox x:ConnectionId='4'   Grid.Column="1"  Grid.Row="2" x:Name="cboCap"></ComboBox>
+            <DatePicker x:ConnectionId='5' Grid.Column="1"  Grid.Row="3" x:Name="dtpDataAltaEdit"></DatePicker>
+            <TextBox x:ConnectionId='6'    Grid.Column="1"  Grid.Row="4" x:Name="txbSalari"></TextBox>
+            <TextBox x:ConnectionId='7'    Grid.Column="1"  Grid.Row="5" x:Name="txbComissio"></TextBox>
+            <ComboBox x:ConnectionId='8'   Grid.Column="1"  Grid.Row="6" x:Name="cboDepartament"></ComboBox>
         </Grid>
-        <controls:DataGrid x:ConnectionId='2' x:Name="dtgEmpleats"  Grid.Row="1" ></controls:DataGrid>
-    </Grid>
+    
+    </StackPanel>
 </Page>
 

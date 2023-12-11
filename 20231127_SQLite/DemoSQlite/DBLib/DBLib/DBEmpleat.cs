@@ -40,7 +40,39 @@ namespace DBLib
         public int DeptNo { get => deptNo; set => deptNo = value; }
 
         #endregion
-    
+
+
+        public static long getNumeroEmpleats(String pCognom = "", DateTime? dt = null)
+        {
+            long numeroEmpleats = 0;
+
+            using (var context = new SQLiteDBContext())
+            {
+                using (var connexio = context.Database.GetDbConnection())
+                {
+                    connexio.Open();
+                    using (var consulta = connexio.CreateCommand())
+                    {
+
+                        DBUtils.createParam(consulta, "p_cognom", "%" + pCognom + "%", System.Data.DbType.String);
+                        DBUtils.createParam(consulta,
+                                                "p_data_alta",
+                                                dt == null ? DateTime.MinValue : dt,
+                                                System.Data.DbType.DateTime);
+
+                        consulta.CommandText = @"
+                            select count(1) from emp
+                               where 
+                                    (cognom like @p_cognom) and 
+                                    ( data_alta>@p_data_alta);
+                        ";
+                        numeroEmpleats = (long) consulta.ExecuteScalar();
+                    }
+                }
+            }
+            return numeroEmpleats;
+        }
+
         public static List<DBEmpleat> getEmpleats(String pCognom = "", DateTime? dt = null)
         {
             using(var context = new SQLiteDBContext()){
@@ -60,17 +92,12 @@ namespace DBLib
                         //";
                         //---------------------
                         // Creació de paràmetres
-                        DbParameter paramCognom =  consulta.CreateParameter();
-                        paramCognom.ParameterName = "p_cognom";
-                        paramCognom.Value = "%"+pCognom+"%";
-                        paramCognom.DbType = System.Data.DbType.String;
-                        consulta.Parameters.Add(paramCognom);
 
-                        DbParameter paramDataAlta = consulta.CreateParameter();
-                        paramDataAlta.ParameterName = "p_data_alta";
-                        paramDataAlta.Value = dt == null ? DateTime.MinValue:dt ;
-                        paramDataAlta.DbType = System.Data.DbType.DateTime;
-                        consulta.Parameters.Add(paramDataAlta);
+                        DBUtils.createParam(consulta, "p_cognom", "%" + pCognom + "%", System.Data.DbType.String);
+                        DBUtils.createParam(    consulta, 
+                                                "p_data_alta",
+                                                dt == null ? DateTime.MinValue : dt, 
+                                                System.Data.DbType.DateTime);
 
                         consulta.CommandText = @"
                             select * from emp
