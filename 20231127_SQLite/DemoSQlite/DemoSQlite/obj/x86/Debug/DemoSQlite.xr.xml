@@ -1,13 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="EmpNo" />
+    <RootPropertyPathName Name="EmpleatSeleccionat" />
+    <RootPropertyPathName Name="Comissio" />
+    <RootPropertyPathName Name="Salari" />
+    <RootPropertyPathName Name="DataAlta" />
+    <RootPropertyPathName Name="Cap" />
+    <RootPropertyPathName Name="Ofici" />
+    <RootPropertyPathName Name="Cognom" />
+  </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
+      <RootProperty Name="Resources" />
       <RootProperty Name="Content" />
       <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="DemoSQlite.converters.DataConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Orientation" />
       <RootProperty Name="Children" />
@@ -35,13 +50,32 @@
       <RootProperty Name="Padding" />
       <RootProperty Name="Inlines" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox" />
-    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker" />
-    <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGrid" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Text" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="SelectedValuePath" />
+      <RootProperty Name="SelectedValue" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
+      <RootProperty Name="Date" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Margin" />
       <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="ElementName" />
+      <RootProperty Name="Path" />
+      <RootProperty Name="Mode" />
+      <RootProperty Name="UpdateSourceTrigger" />
+      <RootProperty Name="Converter" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGrid">
+      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="DemoSQlite.MainPage" />
   </Roots.RootTypes>

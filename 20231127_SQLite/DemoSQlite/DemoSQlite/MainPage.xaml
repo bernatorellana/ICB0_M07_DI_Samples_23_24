@@ -4,11 +4,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DemoSQlite"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls" xmlns:converters="using:DemoSQlite.converters"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     Loaded="Page_Loaded"
+    x:Name="pageMain"
     >
+    <Page.Resources>
+        <converters:DataConverter x:Key="datetimetooffsetconverter"></converters:DataConverter>
+    </Page.Resources>
+    
     <StackPanel Orientation="Horizontal">
         <Grid>
             <Grid.RowDefinitions>
@@ -35,7 +40,7 @@
                 <Button Grid.Column="0" Grid.Row="2" Click="Button_Click_1">Clear</Button>
                 <Button Grid.Column="1" Grid.Row="2" Click="Button_Click">Filter</Button>
             </Grid>
-            <controls:DataGrid x:Name="dtgEmpleats"  Grid.Row="1" ></controls:DataGrid>
+            <controls:DataGrid x:Name="dtgEmpleats"  Grid.Row="1" SelectionChanged="dtgEmpleats_SelectionChanged"></controls:DataGrid>
             <StackPanel Padding="10"  Grid.Row="2" Orientation="Horizontal">
                 <TextBlock>Número d'empleats:</TextBlock>
                 <TextBlock x:Name="txbNumEmpleats"></TextBlock>
@@ -54,6 +59,7 @@
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
             <TextBlock Grid.Column="0" Grid.Row="0"  Padding="10">Cognom:</TextBlock>
             <TextBlock Grid.Column="0" Grid.Row="1"  Padding="10">Ofici:</TextBlock>
@@ -62,14 +68,31 @@
             <TextBlock Grid.Column="0" Grid.Row="4"  Padding="10">Salari:</TextBlock>
             <TextBlock Grid.Column="0" Grid.Row="5"  Padding="10">Comissió:</TextBlock>
             <TextBlock Grid.Column="0" Grid.Row="6"  Padding="10">Departament:</TextBlock>
-            <!-- -->
-            <TextBox    Grid.Column="1"  Grid.Row="0" x:Name="txbCognomEdit"></TextBox>
-            <TextBox    Grid.Column="1"  Grid.Row="1" x:Name="txbOficiEdit"></TextBox>
-            <ComboBox   Grid.Column="1"  Grid.Row="2" x:Name="cboCap"></ComboBox>
-            <DatePicker Grid.Column="1"  Grid.Row="3" x:Name="dtpDataAltaEdit"></DatePicker>
-            <TextBox    Grid.Column="1"  Grid.Row="4" x:Name="txbSalari"></TextBox>
-            <TextBox    Grid.Column="1"  Grid.Row="5" x:Name="txbComissio"></TextBox>
+            <!-- Formulari d'edició de l'empleat -->
+            <TextBox    Grid.Column="1"  Grid.Row="0" x:Name="txbCognomEdit" 
+                        Text="{Binding ElementName=pageMain,Path=EmpleatSeleccionat.Cognom,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox    Grid.Column="1"  Grid.Row="1" x:Name="txbOficiEdit"
+                        Text="{Binding ElementName=pageMain,Path=EmpleatSeleccionat.Ofici,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                        ></TextBox>
+            <ComboBox   Grid.Column="1"  Grid.Row="2"
+                        x:Name="cboCap"
+                        SelectedValuePath="EmpNo"
+                        SelectedValue="{Binding ElementName=pageMain,Path=EmpleatSeleccionat.Cap,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                        ></ComboBox>
+            <DatePicker Grid.Column="1"  Grid.Row="3" x:Name="dtpDataAltaEdit"
+                        Date="{Binding ElementName=pageMain,Path=EmpleatSeleccionat.DataAlta,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,
+                        Converter={StaticResource datetimetooffsetconverter}}"
+                        ></DatePicker>
+            <TextBox    Grid.Column="1"  Grid.Row="4" x:Name="txbSalari"
+                        Text="{Binding ElementName=pageMain,Path=EmpleatSeleccionat.Salari,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                        ></TextBox>
+            <TextBox    Grid.Column="1"  Grid.Row="5" x:Name="txbComissio"
+                        Text="{Binding ElementName=pageMain,Path=EmpleatSeleccionat.Comissio,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                        ></TextBox>
             <ComboBox   Grid.Column="1"  Grid.Row="6" x:Name="cboDepartament"></ComboBox>
+
+            <Button x:Name="btnCancel"  Grid.Column="0"  Grid.Row="7" Margin="0 20 0 0 ">Cancel</Button>
+            <Button x:Name="btnSave"  Grid.Column="1"  Grid.Row="7" HorizontalAlignment="Right"  Margin="0 20 0 0 ">Save</Button>
         </Grid>
     
     </StackPanel>

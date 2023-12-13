@@ -16,18 +16,33 @@ namespace DBLib
         private int salari;
         private int comissio;
         private int deptNo;
+        private DBEmpleat em;
 
         public DBEmpleat(int empNo, string cognom, string ofici, int cap, DateTime dataAlta, int salari, int comissio, int deptNo)
         {
-            EmpNo = empNo;
-            Cognom = cognom;
-            Ofici = ofici;
-            Cap = cap;
-            DataAlta = dataAlta;
-            Salari = salari;
-            Comissio = comissio;
-            DeptNo = deptNo;
+            EmpNo       = empNo;
+            Cognom      = cognom;
+            Ofici       = ofici;
+            Cap         = cap;
+            DataAlta    = dataAlta;
+            Salari      = salari;
+            Comissio    = comissio;
+            DeptNo      = deptNo;
         }
+
+        public DBEmpleat(DBEmpleat em)
+        {
+            this.EmpNo =      em.EmpNo;
+            this.Cognom =     em.Cognom;
+            this.Ofici =      em.Ofici;
+            this.Cap =        em.Cap;
+            this.DataAlta =   em.DataAlta;
+            this.Salari =     em.Salari;
+            this.Comissio =   em.Comissio;
+            this.DeptNo =     em.DeptNo;
+        }
+
+
 
         #region props
         public int EmpNo { get => empNo; set => empNo = value; }
@@ -125,6 +140,16 @@ namespace DBLib
                 }
             }
         }
-    
+
+        public override bool Equals(object obj)
+        {
+            return obj is DBEmpleat empleat &&
+                   EmpNo == empleat.EmpNo;
+        }
+
+        public override int GetHashCode()
+        {
+            return 1626872650 + EmpNo.GetHashCode();
+        }
     }
 }

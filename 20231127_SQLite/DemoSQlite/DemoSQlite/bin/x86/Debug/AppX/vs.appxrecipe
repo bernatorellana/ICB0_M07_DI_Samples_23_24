@@ -30,13 +30,13 @@
     <AppXManifest Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DemoSQlite\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-12-11T18:27:25.671</Modified>
+      <Modified>2023-12-13T19:50:34.546</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DemoSQlite\bin\x86\Debug\DemoSQlite.exe">
       <PackagePath>entrypoint\DemoSQlite.exe</PackagePath>
-      <Modified>2023-12-11T18:27:25.329</Modified>
+      <Modified>2023-12-13T19:50:34.198</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\.nuget\packages\microsoft.data.sqlite.core\2.0.0\lib\netstandard2.0\Microsoft.Data.Sqlite.dll">
       <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
@@ -128,7 +128,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DBLib\DBLib\bin\Debug\netstandard2.0\DBLib.dll">
       <PackagePath>DBLib.dll</PackagePath>
-      <Modified>2023-12-11T18:13:17.411</Modified>
+      <Modified>2023-12-13T19:13:02.382</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -182,15 +182,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DemoSQlite\bin\x86\Debug\DemoSQlite.xr.xml">
       <PackagePath>DemoSQlite.xr.xml</PackagePath>
-      <Modified>2023-12-11T18:25:50.152</Modified>
+      <Modified>2023-12-13T19:35:50.691</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DemoSQlite\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-12-11T18:27:25.288</Modified>
+      <Modified>2023-12-13T19:50:34.154</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DemoSQlite\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-12-11T18:27:25.289</Modified>
+      <Modified>2023-12-13T19:50:34.154</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -198,11 +198,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DemoSQlite\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-12-11T18:13:20.875</Modified>
+      <Modified>2023-12-13T19:29:57.262</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DemoSQlite\bin\x86\Debug\Core\DemoSQlite.exe">
       <PackagePath>DemoSQlite.exe</PackagePath>
-      <Modified>2023-12-11T18:27:25.668</Modified>
+      <Modified>2023-12-13T19:50:34.543</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

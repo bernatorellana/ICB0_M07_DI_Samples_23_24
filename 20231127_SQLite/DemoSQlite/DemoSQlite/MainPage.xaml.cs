@@ -31,7 +31,9 @@ namespace DemoSQlite
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             launchQuery();
-            
+            cboCap.DisplayMemberPath = "Cognom";
+
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -49,13 +51,65 @@ namespace DemoSQlite
             long numEmpleats = DBEmpleat.getNumeroEmpleats(txbCognom.Text, dt );
             txbNumEmpleats.Text = numEmpleats.ToString();
 
-            cboCap.ItemsSource = dtgEmpleats.ItemsSource; // Pendent de canviar, quan filtrem no hauria de canviar !
-            cboCap.DisplayMemberPath = "Cognom";
+      
+            
         }
-
+   
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             dtpDate.SelectedDate=null;
+        }
+
+
+
+        //public DBEmpleat EmpleatSeleccionat{ get; set; }
+
+
+
+        public DBEmpleat EmpleatSeleccionat
+        {
+            get { return (DBEmpleat)GetValue(EmpleatSeleccionatProperty); }
+            set { SetValue(EmpleatSeleccionatProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for EmpleatSeleccionat.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty EmpleatSeleccionatProperty =
+            DependencyProperty.Register("EmpleatSeleccionat", typeof(DBEmpleat), typeof(MainPage), 
+                new PropertyMetadata(new DBEmpleat(0,"","",0,DateTime.Now,0,0,0)));
+
+
+
+        private void dtgEmpleats_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dtgEmpleats.SelectedItem != null)
+            {
+                DBEmpleat em = (DBEmpleat)dtgEmpleats.SelectedItem;
+                EmpleatSeleccionat = new DBEmpleat(em);
+
+                /*List<DBEmpleat> possiblesCaps = DBEmpleat.getEmpleats();
+                possiblesCaps.Remove(em);
+                List<DBEmpleat> possiblesCapsActuals = (List<DBEmpleat>) cboCap.ItemsSource;
+                // No reemplacem el ItemSource del combobox per no trencar el binding.
+                // Per contra, buidem la llista i la tornem a omplir per mantenir l'ús del 
+                // mateix punter.
+                possiblesCapsActuals.Clear();
+                possiblesCapsActuals.AddRange(possiblesCaps);*/
+
+
+                //SelectedValue="{Binding ElementName=pageMain,Path=EmpleatSeleccionat.Cap,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+
+
+                cboCap.ItemsSource = DBEmpleat.getEmpleats();
+                // Binding dinàmic, en comptes de fer-ho al XAML ho fem al codi
+                // per poder canviar el ItemSource
+                Binding binding = new Binding() { ElementName="pageMain",
+                                                Path = new PropertyPath("EmpleatSeleccionat.Cap"),
+                                                Mode=BindingMode.TwoWay, 
+                                                UpdateSourceTrigger=UpdateSourceTrigger.PropertyChanged};
+                cboCap.SetBinding(ComboBox.SelectedValueProperty, binding);
+
+
+            }
         }
     }
 }

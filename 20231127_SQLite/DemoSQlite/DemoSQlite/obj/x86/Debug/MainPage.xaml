@@ -4,11 +4,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DemoSQlite"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls" xmlns:converters="using:DemoSQlite.converters"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
                         
+    x:Name="pageMain"
     >
+    <Page.Resources>
+        <converters:DataConverter x:Key="datetimetooffsetconverter"></converters:DataConverter>
+    </Page.Resources>
+    
     <StackPanel Orientation="Horizontal">
         <Grid>
             <Grid.RowDefinitions>
@@ -27,18 +32,18 @@
                     <RowDefinition Height="auto"></RowDefinition>
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Column="0" Grid.Row="0">Cognom:</TextBlock>
-                <TextBox x:ConnectionId='11' Grid.Column="1" Grid.Row="0" x:Name="txbCognom"></TextBox>
+                <TextBox x:ConnectionId='13' Grid.Column="1" Grid.Row="0" x:Name="txbCognom"></TextBox>
 
                 <TextBlock Grid.Column="0" Grid.Row="1">Posterior a:</TextBlock>
-                <DatePicker x:ConnectionId='12'  Grid.Column="1" Grid.Row="1" x:Name="dtpDate"></DatePicker>
+                <DatePicker x:ConnectionId='14'  Grid.Column="1" Grid.Row="1" x:Name="dtpDate"></DatePicker>
 
-                <Button x:ConnectionId='13' Grid.Column="0" Grid.Row="2"                       >Clear</Button>
-                <Button x:ConnectionId='14' Grid.Column="1" Grid.Row="2"                     >Filter</Button>
+                <Button x:ConnectionId='15' Grid.Column="0" Grid.Row="2"                       >Clear</Button>
+                <Button x:ConnectionId='16' Grid.Column="1" Grid.Row="2"                     >Filter</Button>
             </Grid>
-            <controls:DataGrid x:ConnectionId='9' x:Name="dtgEmpleats"  Grid.Row="1" ></controls:DataGrid>
+            <controls:DataGrid x:ConnectionId='11' x:Name="dtgEmpleats"  Grid.Row="1"                                                ></controls:DataGrid>
             <StackPanel Padding="10"  Grid.Row="2" Orientation="Horizontal">
                 <TextBlock>Número d'empleats:</TextBlock>
-                <TextBlock x:ConnectionId='10' x:Name="txbNumEmpleats"></TextBlock>
+                <TextBlock x:ConnectionId='12' x:Name="txbNumEmpleats"></TextBlock>
             </StackPanel>
         </Grid>
         <Grid Padding="20" VerticalAlignment="Center">
@@ -54,6 +59,7 @@
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
             <TextBlock Grid.Column="0" Grid.Row="0"  Padding="10">Cognom:</TextBlock>
             <TextBlock Grid.Column="0" Grid.Row="1"  Padding="10">Ofici:</TextBlock>
@@ -62,14 +68,31 @@
             <TextBlock Grid.Column="0" Grid.Row="4"  Padding="10">Salari:</TextBlock>
             <TextBlock Grid.Column="0" Grid.Row="5"  Padding="10">Comissió:</TextBlock>
             <TextBlock Grid.Column="0" Grid.Row="6"  Padding="10">Departament:</TextBlock>
-            <!-- -->
-            <TextBox x:ConnectionId='2'    Grid.Column="1"  Grid.Row="0" x:Name="txbCognomEdit"></TextBox>
-            <TextBox x:ConnectionId='3'    Grid.Column="1"  Grid.Row="1" x:Name="txbOficiEdit"></TextBox>
-            <ComboBox x:ConnectionId='4'   Grid.Column="1"  Grid.Row="2" x:Name="cboCap"></ComboBox>
-            <DatePicker x:ConnectionId='5' Grid.Column="1"  Grid.Row="3" x:Name="dtpDataAltaEdit"></DatePicker>
-            <TextBox x:ConnectionId='6'    Grid.Column="1"  Grid.Row="4" x:Name="txbSalari"></TextBox>
-            <TextBox x:ConnectionId='7'    Grid.Column="1"  Grid.Row="5" x:Name="txbComissio"></TextBox>
+            <!-- Formulari d'edició de l'empleat -->
+            <TextBox x:ConnectionId='2'    Grid.Column="1"  Grid.Row="0" x:Name="txbCognomEdit" 
+                        Text="{Binding ElementName=pageMain,Path=EmpleatSeleccionat.Cognom,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox x:ConnectionId='3'    Grid.Column="1"  Grid.Row="1" x:Name="txbOficiEdit"
+                        Text="{Binding ElementName=pageMain,Path=EmpleatSeleccionat.Ofici,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                        ></TextBox>
+            <ComboBox x:ConnectionId='4'   Grid.Column="1"  Grid.Row="2"
+                        x:Name="cboCap"
+                        SelectedValuePath="EmpNo"
+                        SelectedValue="{Binding ElementName=pageMain,Path=EmpleatSeleccionat.Cap,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                        ></ComboBox>
+            <DatePicker x:ConnectionId='5' Grid.Column="1"  Grid.Row="3" x:Name="dtpDataAltaEdit"
+                        Date="{Binding ElementName=pageMain,Path=EmpleatSeleccionat.DataAlta,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,
+                        Converter={StaticResource datetimetooffsetconverter}}"
+                        ></DatePicker>
+            <TextBox x:ConnectionId='6'    Grid.Column="1"  Grid.Row="4" x:Name="txbSalari"
+                        Text="{Binding ElementName=pageMain,Path=EmpleatSeleccionat.Salari,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                        ></TextBox>
+            <TextBox x:ConnectionId='7'    Grid.Column="1"  Grid.Row="5" x:Name="txbComissio"
+                        Text="{Binding ElementName=pageMain,Path=EmpleatSeleccionat.Comissio,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                        ></TextBox>
             <ComboBox x:ConnectionId='8'   Grid.Column="1"  Grid.Row="6" x:Name="cboDepartament"></ComboBox>
+
+            <Button x:ConnectionId='9' x:Name="btnCancel"  Grid.Column="0"  Grid.Row="7" Margin="0 20 0 0 ">Cancel</Button>
+            <Button x:ConnectionId='10' x:Name="btnSave"  Grid.Column="1"  Grid.Row="7" HorizontalAlignment="Right"  Margin="0 20 0 0 ">Save</Button>
         </Grid>
     
     </StackPanel>
