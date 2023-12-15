@@ -32,7 +32,8 @@ namespace DemoSQlite
         {
             launchQuery();
             cboCap.DisplayMemberPath = "Cognom";
-
+            cboDepartament.ItemsSource = DBDept.getDepartaments();
+            cboDepartament.DisplayMemberPath = "Dnom";
 
         }
 
@@ -110,6 +111,12 @@ namespace DemoSQlite
 
 
             }
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            DBEmpleat.update(EmpleatSeleccionat);
+            launchQuery();
         }
     }
 }

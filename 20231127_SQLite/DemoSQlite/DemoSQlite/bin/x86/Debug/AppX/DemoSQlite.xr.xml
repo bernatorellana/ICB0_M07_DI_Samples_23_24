@@ -5,7 +5,9 @@
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="EmpNo" />
+    <RootPropertyPathName Name="Dept_no" />
     <RootPropertyPathName Name="EmpleatSeleccionat" />
+    <RootPropertyPathName Name="DeptNo" />
     <RootPropertyPathName Name="Comissio" />
     <RootPropertyPathName Name="Salari" />
     <RootPropertyPathName Name="DataAlta" />

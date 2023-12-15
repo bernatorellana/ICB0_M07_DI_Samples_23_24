@@ -89,10 +89,13 @@
             <TextBox x:ConnectionId='7'    Grid.Column="1"  Grid.Row="5" x:Name="txbComissio"
                         Text="{Binding ElementName=pageMain,Path=EmpleatSeleccionat.Comissio,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                         ></TextBox>
-            <ComboBox x:ConnectionId='8'   Grid.Column="1"  Grid.Row="6" x:Name="cboDepartament"></ComboBox>
+            <ComboBox x:ConnectionId='8'   Grid.Column="1"  Grid.Row="6" x:Name="cboDepartament"
+                        SelectedValue="{Binding ElementName=pageMain,Path=EmpleatSeleccionat.DeptNo,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                        SelectedValuePath="Dept_no"
+                        ></ComboBox>
 
             <Button x:ConnectionId='9' x:Name="btnCancel"  Grid.Column="0"  Grid.Row="7" Margin="0 20 0 0 ">Cancel</Button>
-            <Button x:ConnectionId='10' x:Name="btnSave"  Grid.Column="1"  Grid.Row="7" HorizontalAlignment="Right"  Margin="0 20 0 0 ">Save</Button>
+            <Button x:ConnectionId='10' x:Name="btnSave"                        Grid.Column="1"  Grid.Row="7" HorizontalAlignment="Right"  Margin="0 20 0 0 ">Save</Button>
         </Grid>
     
     </StackPanel>
