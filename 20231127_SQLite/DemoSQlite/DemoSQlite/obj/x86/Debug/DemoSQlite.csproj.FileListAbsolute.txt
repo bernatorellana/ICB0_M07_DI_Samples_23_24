@@ -81,3 +81,8 @@ E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQL
 E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DemoSQlite\obj\x86\Debug\resources.en-us.resfiles.intermediate
 E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DemoSQlite\obj\x86\Debug\ProjectArchitectures.txt
 E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DemoSQlite\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DemoSQlite\bin\x86\Debug\Microsoft.Web.WebView2.Core.dll
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DemoSQlite\bin\x86\Debug\WebView2Loader.dll
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DemoSQlite\bin\x86\Debug\Microsoft.Web.WebView2.Core.winmd
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DemoSQlite\obj\x86\Debug\Microsoft.UI.Xaml.pri.xml
+E:\Docencia\Material_Moduls\M7_DI\repoGit\ICB0_M07_DI_Samples_23_24\20231127_SQLite\DemoSQlite\DemoSQlite\obj\x86\Debug\.winmd_cache\$Microsoft.Web.WebView2.Core.winmd_637920505780000000.json

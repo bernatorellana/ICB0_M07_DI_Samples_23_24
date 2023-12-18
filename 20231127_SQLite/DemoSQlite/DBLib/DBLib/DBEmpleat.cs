@@ -90,7 +90,7 @@ namespace DBLib
             return numeroEmpleats;
         }
 
-        public static List<DBEmpleat> getEmpleats(String pCognom = "", DateTime? dt = null)
+        public static List<DBEmpleat> getEmpleats(long paginaActual, long elementsPerPagina, String pCognom = "", DateTime? dt = null)
         {
             using (var context = new SQLiteDBContext())
             {
@@ -117,13 +117,18 @@ namespace DBLib
                                                 "p_data_alta",
                                                 dt == null ? DateTime.MinValue : dt,
                                                 System.Data.DbType.DateTime);
+                        DBUtils.createParam(consulta, "p_limit", elementsPerPagina, System.Data.DbType.Int64);
+                        DBUtils.createParam(consulta, "p_emp_inicial", elementsPerPagina* paginaActual, System.Data.DbType.Int64);
 
                         consulta.CommandText = @"
                             select * from emp
                                where 
                                     (cognom like @p_cognom) and 
-                                    ( data_alta>@p_data_alta);
-                        ";
+                                    ( data_alta>@p_data_alta) ";
+                        if (elementsPerPagina > 0)
+                        {
+                            consulta.CommandText += "LIMIT @p_limit OFFSET @p_emp_inicial;";
+                        }
                         DbDataReader reader = consulta.ExecuteReader();
                         List<DBEmpleat> empleats = new List<DBEmpleat>();
                         while (reader.Read())

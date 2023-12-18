@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DemoSQlite"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:winui="using:Microsoft.UI.Xaml.Controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls" xmlns:converters="using:DemoSQlite.converters"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
@@ -20,6 +21,7 @@
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Margin="20" Padding="20 ">
                 <Grid.ColumnDefinitions>
@@ -32,19 +34,38 @@
                     <RowDefinition Height="auto"></RowDefinition>
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Column="0" Grid.Row="0">Cognom:</TextBlock>
-                <TextBox x:ConnectionId='13' Grid.Column="1" Grid.Row="0" x:Name="txbCognom"></TextBox>
+                <TextBox x:ConnectionId='18' Grid.Column="1" Grid.Row="0" x:Name="txbCognom"></TextBox>
 
                 <TextBlock Grid.Column="0" Grid.Row="1">Posterior a:</TextBlock>
-                <DatePicker x:ConnectionId='14'  Grid.Column="1" Grid.Row="1" x:Name="dtpDate"></DatePicker>
+                <DatePicker x:ConnectionId='19'  Grid.Column="1" Grid.Row="1" x:Name="dtpDate"></DatePicker>
 
-                <Button x:ConnectionId='15' Grid.Column="0" Grid.Row="2"                       >Clear</Button>
-                <Button x:ConnectionId='16' Grid.Column="1" Grid.Row="2"                     >Filter</Button>
+                <Button x:ConnectionId='20' Grid.Column="0" Grid.Row="2"                       >Clear</Button>
+                <Button x:ConnectionId='21' Grid.Column="1" Grid.Row="2"                     >Filter</Button>
             </Grid>
             <controls:DataGrid x:ConnectionId='11' x:Name="dtgEmpleats"  Grid.Row="1"                                                ></controls:DataGrid>
-            <StackPanel Padding="10"  Grid.Row="2" Orientation="Horizontal">
+            <!--winui:PagerControl x:Name="Pager"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            NumberOfPages="{x:Bind Pictures.Count}"
+                            SelectedPageIndex="{x:Bind ImageRepeater.SelectedIndex, Mode=TwoWay}"
+                            FirstButtonVisibility="Hidden"
+                            LastButtonVisibility="Hidden"
+                            NextButtonVisibility="Hidden"
+                            PreviousButtonVisibility="Hidden"
+                            DisplayMode="ButtonPanel" /> -->
+            <StackPanel  Grid.Row="2"  Orientation="Horizontal">
+                <Button x:ConnectionId='13' x:Name="btnFirst"                        FontFamily="Segoe MDL2 Assets" >&#xE892;</Button>
+                <Button x:ConnectionId='14' x:Name="btnBack"                        FontFamily="Segoe MDL2 Assets" >&#xE72B;</Button>
+                <TextBlock x:ConnectionId='15' x:Name="txvPage"></TextBlock>
+                <Button x:ConnectionId='16' x:Name="btnForward"                          FontFamily="Segoe MDL2 Assets" >&#xE72A;</Button>
+                <Button x:ConnectionId='17' x:Name="btnLast"                       FontFamily="Segoe MDL2 Assets" >&#xE893;</Button>
+            </StackPanel>
+
+            <StackPanel Padding="10"  Grid.Row="3" Orientation="Horizontal">
                 <TextBlock>Número d'empleats:</TextBlock>
                 <TextBlock x:ConnectionId='12' x:Name="txbNumEmpleats"></TextBlock>
             </StackPanel>
+            
         </Grid>
         <Grid Padding="20" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>

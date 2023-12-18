@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DemoSQlite"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:winui="using:Microsoft.UI.Xaml.Controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls" xmlns:converters="using:DemoSQlite.converters"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
@@ -19,6 +20,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Margin="20" Padding="20 ">
@@ -41,10 +43,29 @@
                 <Button Grid.Column="1" Grid.Row="2" Click="Button_Click">Filter</Button>
             </Grid>
             <controls:DataGrid x:Name="dtgEmpleats"  Grid.Row="1" SelectionChanged="dtgEmpleats_SelectionChanged"></controls:DataGrid>
-            <StackPanel Padding="10"  Grid.Row="2" Orientation="Horizontal">
+            <!--winui:PagerControl x:Name="Pager"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            NumberOfPages="{x:Bind Pictures.Count}"
+                            SelectedPageIndex="{x:Bind ImageRepeater.SelectedIndex, Mode=TwoWay}"
+                            FirstButtonVisibility="Hidden"
+                            LastButtonVisibility="Hidden"
+                            NextButtonVisibility="Hidden"
+                            PreviousButtonVisibility="Hidden"
+                            DisplayMode="ButtonPanel" /> -->
+            <StackPanel  Grid.Row="2"  Orientation="Horizontal">
+                <Button x:Name="btnFirst" Click="btnFirst_Click" FontFamily="Segoe MDL2 Assets" >&#xE892;</Button>
+                <Button x:Name="btnBack" Click="btnBack_Click"  FontFamily="Segoe MDL2 Assets" >&#xE72B;</Button>
+                <TextBlock x:Name="txvPage"></TextBlock>
+                <Button x:Name="btnForward" Click="btnForward_Click" FontFamily="Segoe MDL2 Assets" >&#xE72A;</Button>
+                <Button x:Name="btnLast" Click="btnLast_Click" FontFamily="Segoe MDL2 Assets" >&#xE893;</Button>
+            </StackPanel>
+
+            <StackPanel Padding="10"  Grid.Row="3" Orientation="Horizontal">
                 <TextBlock>Número d'empleats:</TextBlock>
                 <TextBlock x:Name="txbNumEmpleats"></TextBlock>
             </StackPanel>
+            
         </Grid>
         <Grid Padding="20" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>

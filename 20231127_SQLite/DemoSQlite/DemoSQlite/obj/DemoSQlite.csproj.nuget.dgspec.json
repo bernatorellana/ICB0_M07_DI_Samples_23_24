@@ -95,14 +95,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "uap10.0.17134"
+          "uap10.0.17763"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "uap10.0.17134": {
+          "uap10.0.17763": {
             "projectReferences": {
               "E:\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\ICB0_M07_DI_Samples_23_24\\20231127_SQLite\\DemoSQlite\\DBLib\\DBLib\\DBLib.csproj": {
                 "projectPath": "E:\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\ICB0_M07_DI_Samples_23_24\\20231127_SQLite\\DemoSQlite\\DBLib\\DBLib\\DBLib.csproj"
@@ -112,7 +112,7 @@
         }
       },
       "frameworks": {
-        "uap10.0.17134": {
+        "uap10.0.17763": {
           "dependencies": {
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
@@ -121,6 +121,10 @@
             "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid": {
               "target": "Package",
               "version": "[5.1.0, )"
+            },
+            "Microsoft.UI.Xaml": {
+              "target": "Package",
+              "version": "[2.8.6, )"
             }
           },
           "imports": [

@@ -23,6 +23,10 @@ namespace DemoSQlite
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private const int ITEMS_PER_PAGINA = 5;
+        private long numeroDePagines = 0;
+        private long paginaActual = 0;
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -47,10 +51,15 @@ namespace DemoSQlite
 
             DateTime? dt = null;
             dt = dtpDate.SelectedDate?.Date;
-            dtgEmpleats.ItemsSource = DBEmpleat.getEmpleats(txbCognom.Text, dt );
+
             // Ara fem el recompte d'empleats
-            long numEmpleats = DBEmpleat.getNumeroEmpleats(txbCognom.Text, dt );
+            long numEmpleats = DBEmpleat.getNumeroEmpleats(txbCognom.Text, dt);
             txbNumEmpleats.Text = numEmpleats.ToString();
+
+            numeroDePagines = (long)Math.Ceiling( numEmpleats / (decimal)ITEMS_PER_PAGINA);
+
+            dtgEmpleats.ItemsSource = DBEmpleat.getEmpleats(paginaActual, ITEMS_PER_PAGINA, txbCognom.Text, dt);
+
 
       
             
@@ -100,7 +109,7 @@ namespace DemoSQlite
                 //SelectedValue="{Binding ElementName=pageMain,Path=EmpleatSeleccionat.Cap,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
 
 
-                cboCap.ItemsSource = DBEmpleat.getEmpleats();
+                cboCap.ItemsSource = DBEmpleat.getEmpleats(paginaActual,-1);
                 // Binding dinàmic, en comptes de fer-ho al XAML ho fem al codi
                 // per poder canviar el ItemSource
                 Binding binding = new Binding() { ElementName="pageMain",
@@ -116,6 +125,37 @@ namespace DemoSQlite
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             DBEmpleat.update(EmpleatSeleccionat);
+            launchQuery();
+        }
+
+        private void btnFirst_Click(object sender, RoutedEventArgs e)
+        {
+            this.paginaActual = 0;
+            launchQuery();
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            if (paginaActual > 0)
+            {
+                this.paginaActual--;
+                launchQuery();
+            }
+            
+        }
+
+        private void btnForward_Click(object sender, RoutedEventArgs e)
+        {
+            if (paginaActual < numeroDePagines - 1)
+            {
+                this.paginaActual++;
+                launchQuery();
+            }
+        }
+
+        private void btnLast_Click(object sender, RoutedEventArgs e)
+        {
+            this.paginaActual = numeroDePagines-1;
             launchQuery();
         }
     }
